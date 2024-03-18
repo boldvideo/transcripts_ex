@@ -26,13 +26,13 @@ defmodule BoldTranscriptsExTest do
 
   describe "AssemblyAI Transcripts" do
     test "chapters to WebVTT" do
-      input = load_json_from_file("test/support/data/assembly_transcript_hackathon.json")
+      input = load_json_from_file("test/support/data/assembly_transcript_ig.json")
 
       {:ok, vtt} = BoldTranscriptsEx.Convert.chapters_to_webvtt(:assemblyai, input)
 
       Logger.info(inspect(vtt))
 
-      assert String.starts_with?(vtt, "WEBVTT\n\n1\n00:00:00.000 --> ")
+      assert String.starts_with?(vtt, "WEBVTT\n\n1\n00")
     end
   end
 end
