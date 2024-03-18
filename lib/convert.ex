@@ -11,6 +11,8 @@ defmodule BoldTranscriptsEx.Convert do
     Logger.error("Conversion from #{service} is not implemented yet.")
   end
 
+  def chapters_to_webvtt(service, _transcript_json, _opts \\ [])
+
   def chapters_to_webvtt(:assemblyai, transcript_json, opts) do
     BoldTranscriptsEx.Convert.AssemblyAI.chapters_to_webvtt(transcript_json, opts)
   end
