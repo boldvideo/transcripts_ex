@@ -6,7 +6,25 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
   alias Jason
   require Logger
 
-  def convert(main_transcript, opts \\ []) do
+  @doc """
+  Converts an AssemblyAI transcript to the Bold Transcript format.
+
+  ## Parameters
+
+  - `main_transcript`: The JSON string of the main transcript data from AssemblyAI.
+  - `opts`: Options for the conversion. Can include `:paragraphs` and `:sentences` data as JSON strings.
+
+  ## Returns
+
+  - `{:ok, merged_data}`: A tuple with `:ok` atom and the merged data in Bold Transcript format.
+
+  ## Examples
+
+      iex> BoldTranscriptsEx.Convert.AssemblyAI.transcript_to_bold(main_transcript)
+      {:ok, %{"metadata" => metadata, "utterances" => utterances, "paragraphs" => paragraphs}}
+
+  """
+  def transcript_to_bold(main_transcript, opts \\ []) do
     transcript_data = Jason.decode!(main_transcript)
     paragraphs_data = Keyword.get(opts, :paragraphs, %{}) |> Jason.decode!()
     sentences_data = Keyword.get(opts, :sentences, %{}) |> Jason.decode!()
@@ -28,6 +46,44 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
     }
 
     {:ok, merged_data}
+  end
+
+  @doc """
+  Converts chapter data extracted from an AssemblyAI transcript JSON to WebVTT format.
+
+  ## Parameters
+
+  - `transcript_json`: The JSON string of the full transcript data from AssemblyAI, which includes chapters.
+  - `opts`: Optional parameters for the conversion (unused for now, but included for future flexibility).
+
+  ## Returns
+
+  - A string in WebVTT format representing the chapters.
+
+  ## Examples
+
+      iex> transcript_json = "{...}" # Your full transcript JSON string here
+      iex> BoldTranscriptsEx.Convert.AssemblyAI.chapters_to_webvtt(transcript_json)
+      "WEBVTT\n\n1\n00:00:01.000 --> 00:00:05.000\nChapter 1\n\nSummary of chapter 1\n\n"
+
+  """
+  def chapters_to_webvtt(transcript_json, _opts \\ []) do
+    transcript = Jason.decode!(transcript_json)
+    chapters = Map.fetch!(transcript, "chapters")
+    header = "WEBVTT\n\n"
+
+    chapters_vtt =
+      Enum.with_index(chapters, 1)
+      |> Enum.map(fn {chapter, index} ->
+        start_time = format_time(chapter["start"])
+        end_time = format_time(chapter["end"])
+        title = chapter["headline"]
+        summary = chapter["summary"]
+
+        "#{index}\n#{start_time} --> #{end_time}\n#{title}\n\n#{summary}\n"
+      end)
+
+    header <> Enum.join(chapters_vtt, "\n")
   end
 
   defp extract_metadata(data, speakers) do
@@ -66,6 +122,16 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
     data
     |> Map.update!("start", &(&1 / 1000.0))
     |> Map.update!("end", &(&1 / 1000.0))
+  end
+
+  defp format_time(milliseconds) do
+    seconds = div(milliseconds, 1000)
+    hours = div(seconds, 3600)
+    minutes = div(rem(seconds, 3600), 60)
+    seconds = rem(seconds, 60)
+
+    format = fn number -> String.pad_leading(Integer.to_string(number), 2, "0") end
+    "#{format.(hours)}:#{format.(minutes)}:#{format.(seconds)}.000"
   end
 
   # # Fallback for non-map inputs
