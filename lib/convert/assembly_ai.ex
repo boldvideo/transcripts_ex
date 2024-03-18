@@ -77,13 +77,13 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
       |> Enum.map(fn {chapter, index} ->
         start_time = format_time(chapter["start"])
         end_time = format_time(chapter["end"])
-        title = chapter["headline"]
+        # title = chapter["headline"]
         # summary = chapter["summary"]
         # using gist instead of summary because it's more concise
         # and turned out to be more useful during testing
         gist = chapter["gist"]
 
-        "#{index}\n#{start_time} --> #{end_time}\n#{title}\n\n#{gist}\n"
+        "#{index}\n#{start_time} --> #{end_time}\n#{gist}\n"
       end)
 
     {:ok, header <> Enum.join(chapters_vtt, "\n")}
