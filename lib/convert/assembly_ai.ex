@@ -78,12 +78,15 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
         start_time = format_time(chapter["start"])
         end_time = format_time(chapter["end"])
         title = chapter["headline"]
-        summary = chapter["summary"]
+        # summary = chapter["summary"]
+        # using gist instead of summary because it's more concise
+        # and turned out to be more useful during testing
+        gist = chapter["gist"]
 
-        "#{index}\n#{start_time} --> #{end_time}\n#{title}\n\n#{summary}\n"
+        "#{index}\n#{start_time} --> #{end_time}\n#{title}\n\n#{gist}\n"
       end)
 
-    header <> Enum.join(chapters_vtt, "\n")
+    {:ok, header <> Enum.join(chapters_vtt, "\n")}
   end
 
   defp extract_metadata(data, speakers) do
