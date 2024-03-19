@@ -28,6 +28,8 @@ defmodule BoldTranscriptsEx.WebVTT do
       [%{start: "0:03", end: "0:16", title: "Coming soon: Back to Stanford"}]
 
   """
+  def parse_chapters(), do: []
+
   def parse_chapters(webvtt) do
     webvtt
     |> String.split("\n\n", trim: true)
