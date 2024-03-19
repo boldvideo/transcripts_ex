@@ -25,7 +25,7 @@ defmodule BoldTranscriptsEx.WebVTT do
 
       iex> webvtt_content = "WEBVTT\\n\\n1\\n00:00:03.000 --> 00:00:16.000\\nComing soon: Back to Stanford"
       iex> BoldTranscriptsEx.WebVTT.parse_chapters(webvtt_content)
-      [%{start: "0:03", title: "Coming soon: Back to Stanford"}]
+      [%{start: "0:03", end: "0:16", title: "Coming soon: Back to Stanford"}]
 
   """
   def parse_chapters(webvtt) do
@@ -36,17 +36,38 @@ defmodule BoldTranscriptsEx.WebVTT do
     |> Enum.map(&parse_section/1)
   end
 
+  def chapters_to_webvtt(chapters) do
+    header = "WEBVTT\n\n"
+
+    body =
+      Enum.with_index(chapters)
+      |> Enum.map(fn {chapter, index} ->
+        format_chapter(chapter, index)
+      end)
+      |> Enum.join("\n\n")
+
+    header <> body
+  end
+
+  defp format_chapter(chapter, index) do
+    formatted_start = time_to_webvtt(chapter.start)
+    formatted_end = time_to_webvtt(Map.get(chapter, :end, nil))
+
+    "#{index + 1}\n#{formatted_start} --> #{formatted_end}\n#{chapter.title}"
+  end
+
   defp parse_section(section) do
     [_, time_range, title] = String.split(section, "\n", parts: 3)
-    %{start: parse_time(String.slice(time_range, 0, 12)), title: String.trim(title)}
+    {start_time, end_time} = parse_time_range(time_range)
+    %{start: start_time, end: end_time, title: String.trim(title)}
   end
 
-  defp parse_time(time_range) do
-    [start_time | _] = String.split(time_range, " --> ")
-    format_time(start_time)
+  defp parse_time_range(time_range) do
+    [start_str, end_str] = String.split(time_range, " --> ")
+    {parse_webvtt_time(start_str), parse_webvtt_time(end_str)}
   end
 
-  defp format_time(time_str) do
+  defp parse_webvtt_time(time_str) do
     parts = String.split(time_str, ":")
     {hours, minutes, seconds} = parse_time_parts(parts)
 
@@ -70,6 +91,32 @@ defmodule BoldTranscriptsEx.WebVTT do
     {hours, minutes, seconds}
   end
 
+  # Default placeholder for invalid/missing times
+  defp time_to_webvtt(nil), do: "99:59:59.999"
+
+  defp time_to_webvtt(time) do
+    parts = String.split(time, ":")
+
+    case parts do
+      [hours, minutes, seconds] ->
+        hours <> ":" <> minutes <> ":" <> pad_milliseconds(seconds)
+
+      [minutes, seconds] ->
+        "00:" <> minutes <> ":" <> pad_milliseconds(seconds)
+
+      _ ->
+        # Fallback placeholder for unexpected formats
+        "99:59:59.999"
+    end
+  end
+
   defp pad(number) when number < 10, do: "0#{number}"
   defp pad(number), do: Integer.to_string(number)
+
+  defp pad_milliseconds(seconds) do
+    case String.contains?(seconds, ".") do
+      true -> seconds
+      false -> seconds <> ".000"
+    end
+  end
 end
