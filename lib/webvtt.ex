@@ -1,95 +1,75 @@
 defmodule BoldTranscriptsEx.WebVTT do
-  @moduledoc """
-  Converts Bold JSON transcripts into WebVTT format with enhanced processing for readability,
-  synchronization, and segmentation, allowing parameterization for greater flexibility.
-  """
-
   require Logger
 
-  # Entry point with parameters
-  def create(transcript, opts \\ []) do
-    character_per_line = Keyword.get(opts, :characterPerLine, 42)
-    max_lines = Keyword.get(opts, :maxLines, 2)
-    max_time_in_ms = Keyword.get(opts, :maxTimeInMs, 1000)
+  @moduledoc """
+  Provides functionality for parsing WebVTT chapter information.
 
-    vtt =
-      transcript["utterances"]
-      |> Enum.map(&format_utterance_to_vtt(&1, character_per_line, max_lines, max_time_in_ms))
-      |> Enum.join("\n\n")
-      |> (fn content -> "WEBVTT\n\n" <> content end).()
+  This module is designed to extract chapter information from WebVTT files,
+  which are typically used for subtitles or chapter markers in video content.
+  """
 
-    {:ok, vtt}
+  @doc """
+  Parses WebVTT content to extract chapters, converting them into a structured list.
+
+  Each item in the returned list represents a chapter with its start time and title.
+
+  ## Parameters
+
+  - `webvtt`: The WebVTT content as a string.
+
+  ## Returns
+
+  A list of maps, each containing `:start` and `:title` keys for a chapter.
+
+  ## Examples
+
+      iex> webvtt_content = "WEBVTT\\n\\n1\\n00:00:03.000 --> 00:00:16.000\\nComing soon: Back to Stanford"
+      iex> BoldTranscriptsEx.WebVTT.parse_chapters(webvtt_content)
+      [%{start: "0:03", title: "Coming soon: Back to Stanford"}]
+
+  """
+  def parse_chapters(webvtt) do
+    webvtt
+    |> String.split("\n\n", trim: true)
+    # Drop the WEBVTT header
+    |> Enum.drop(1)
+    |> Enum.map(&parse_section/1)
   end
 
-  defp format_utterance_to_vtt(
-         %{"start" => start, "end" => finish, "text" => text},
-         character_per_line,
-         max_lines,
-         _max_time_in_ms
-       ) do
-    start_time = format_time(start)
-    end_time = format_time(finish)
-    text_lines = process_text(text, character_per_line, max_lines)
-
-    "#{start_time} --> #{end_time}\n#{text_lines}\n"
+  defp parse_section(section) do
+    [_, time_range, title] = String.split(section, "\n", parts: 3)
+    %{start: parse_time(String.slice(time_range, 0, 12)), title: String.trim(title)}
   end
 
-  def format_time(seconds) do
-    milliseconds = round(seconds * 1_000)
-    hours = div(milliseconds, 3_600_000)
-    minutes = div(rem(milliseconds, 3_600_000), 60_000)
-    seconds = div(rem(milliseconds, 60_000), 1_000)
-    remaining_milliseconds = rem(milliseconds, 1_000)
-
-    formatted_hours = pad_with_zeroes(hours, 2)
-    formatted_minutes = pad_with_zeroes(minutes, 2)
-    formatted_seconds = pad_with_zeroes(seconds, 2)
-    formatted_milliseconds = pad_with_zeroes(remaining_milliseconds, 3)
-
-    "#{formatted_hours}:#{formatted_minutes}:#{formatted_seconds}.#{formatted_milliseconds}"
+  defp parse_time(time_range) do
+    [start_time | _] = String.split(time_range, " --> ")
+    format_time(start_time)
   end
 
-  defp pad_with_zeroes(number, desired_length) do
-    Integer.to_string(number) |> String.pad_leading(desired_length, "0")
+  defp format_time(time_str) do
+    parts = String.split(time_str, ":")
+    {hours, minutes, seconds} = parse_time_parts(parts)
+
+    cond do
+      hours > 0 -> "#{hours}:#{pad(minutes)}:#{pad(seconds)}"
+      true -> "#{minutes}:#{pad(seconds)}"
+    end
   end
 
-  defp process_text(text, character_per_line, max_lines) do
-    text
-    |> split_sentences()
-    |> Enum.map(&wrap_text(&1, character_per_line, max_lines))
-    |> Enum.join("\n")
-  end
-
-  defp split_sentences(text) do
-    Regex.split(~r/(?<=[.!?])\s+/, text)
-  end
-
-  defp wrap_text(sentence, line_length, max_lines) do
-    sentence
-    |> String.graphemes()
-    |> Enum.reduce({[], 0, 0}, fn grapheme, {lines, current_line_length, line_count} ->
-      if line_count < max_lines and current_line_length + String.length(grapheme) <= line_length do
-        update_lines(lines, grapheme, current_line_length, line_count)
-      else
-        start_new_line(lines, grapheme, line_count)
+  defp parse_time_parts(parts) do
+    [hours, minutes, seconds_with_ms] =
+      case parts do
+        [h, m, s] -> [String.to_integer(h), String.to_integer(m), s]
+        # Assume 0 hours if only minutes and seconds are provided
+        [m, s] -> [0, String.to_integer(m), s]
+        _ -> raise ArgumentError, "Invalid time format"
       end
-    end)
-    |> elem(0)
-    |> Enum.reverse()
-    |> Enum.join("\n")
+
+    seconds = String.split(seconds_with_ms, ".") |> hd() |> String.to_integer()
+
+    {hours, minutes, seconds}
   end
 
-  defp update_lines([], grapheme, _, _) do
-    {[grapheme], String.length(grapheme), 1}
-  end
-
-  defp update_lines(lines, grapheme, current_line_length, line_count) do
-    last_line = List.last(lines) <> grapheme
-    updated_lines = List.update_at(lines, -1, fn _ -> last_line end)
-    {updated_lines, current_line_length + String.length(grapheme), line_count}
-  end
-
-  defp start_new_line(lines, grapheme, line_count) do
-    {lines ++ [grapheme], String.length(grapheme), line_count + 1}
-  end
+  defp pad(number) when number < 10, do: "0#{number}"
+  defp pad(number), do: Integer.to_string(number)
 end
