@@ -69,24 +69,30 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
   """
   def chapters_to_webvtt(transcript_json, _opts \\ []) do
     transcript = Jason.decode!(transcript_json)
-    chapters = Map.fetch!(transcript, "chapters")
-    header = "WEBVTT\n\n"
 
-    chapters_vtt =
-      Enum.with_index(chapters, 1)
-      |> Enum.map(fn {chapter, index} ->
-        start_time = format_time(chapter["start"])
-        end_time = format_time(chapter["end"])
-        # title = chapter["headline"]
-        # summary = chapter["summary"]
-        # using gist instead of summary because it's more concise
-        # and turned out to be more useful during testing
-        gist = chapter["gist"]
+    case Map.fetch!(transcript, "chapters") do
+      nil ->
+        {:error, "No chapters found in the transcript"}
 
-        "#{index}\n#{start_time} --> #{end_time}\n#{gist}\n"
-      end)
+      chapters ->
+        chapters_vtt =
+          Enum.with_index(chapters, 1)
+          |> Enum.map(fn {chapter, index} ->
+            start_time = format_time(chapter["start"])
+            end_time = format_time(chapter["end"])
+            # title = chapter["headline"]
+            # summary = chapter["summary"]
+            # using gist instead of summary because it's more concise
+            # and turned out to be more useful during testing
+            gist = chapter["gist"]
 
-    {:ok, header <> Enum.join(chapters_vtt, "\n")}
+            "#{index}\n#{start_time} --> #{end_time}\n#{gist}\n"
+          end)
+
+        header = "WEBVTT\n\n"
+
+        {:ok, header <> Enum.join(chapters_vtt, "\n")}
+    end
   end
 
   defp extract_metadata(data, speakers) do

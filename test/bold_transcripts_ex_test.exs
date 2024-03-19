@@ -30,9 +30,13 @@ defmodule BoldTranscriptsExTest do
 
       {:ok, vtt} = BoldTranscriptsEx.Convert.chapters_to_webvtt(:assemblyai, input)
 
-      Logger.info(inspect(vtt))
-
       assert String.starts_with?(vtt, "WEBVTT\n\n1\n00")
+    end
+
+    test "chapters to WebVTT without chapters" do
+      input = load_json_from_file("test/support/data/assembly_transcript_ig_nil_chapters.json")
+
+      assert {:error, _reason} = BoldTranscriptsEx.Convert.chapters_to_webvtt(:assemblyai, input)
     end
   end
 end
