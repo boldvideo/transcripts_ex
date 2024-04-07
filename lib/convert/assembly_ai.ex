@@ -3,7 +3,6 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
   Handles conversion of AssemblyAI transcription files to Bold format.
   """
 
-  alias Jason
   require Logger
 
   @doc """
@@ -24,11 +23,18 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
       {:ok, %{"metadata" => metadata, "utterances" => utterances, "paragraphs" => paragraphs}}
 
   """
-  def transcript_to_bold(main_transcript, opts \\ []) do
-    transcript_data = Jason.decode!(main_transcript)
+  def transcript_to_bold(transcript, opts \\ [])
+
+  def transcript_to_bold(transcript, opts) do
+    transcript
+    |> Jason.decode!()
+    |> transcript_to_bold(opts)
+  end
+
+  def transcript_to_bold(transcript, opts) do
     paragraphs_data = Keyword.get(opts, :paragraphs, %{}) |> Jason.decode!()
     sentences_data = Keyword.get(opts, :sentences, %{}) |> Jason.decode!()
-    speakers = extract_speakers(transcript_data["utterances"])
+    speakers = extract_speakers(transcript["utterances"])
 
     # Warning if paragraphs or sentences data is missing
     log_missing_data_warning(paragraphs_data, sentences_data)
@@ -40,8 +46,8 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
         else: paragraphs_data
 
     merged_data = %{
-      "metadata" => extract_metadata(transcript_data, speakers),
-      "utterances" => extract_speech(transcript_data["utterances"]),
+      "metadata" => extract_metadata(transcript, speakers),
+      "utterances" => extract_speech(transcript["utterances"]),
       "paragraphs" => paragraphs
     }
 
@@ -67,10 +73,16 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
       "WEBVTT\n\n1\n00:00:01.000 --> 00:00:05.000\nChapter 1\n\nSummary of chapter 1\n\n"
 
   """
-  def chapters_to_webvtt(transcript_json, _opts \\ []) do
-    transcript = Jason.decode!(transcript_json)
+  def chapters_to_webvtt(transcript, opts \\ [])
 
-    case Map.fetch!(transcript, "chapters") do
+  def chapters_to_webvtt(transcript, opts) when is_binary(transcript) do
+    transcript
+    |> Jason.decode!()
+    |> chapters_to_webvtt(opts)
+  end
+
+  def chapters_to_webvtt(transcript, _opts) when is_map(transcript) do
+    case Map.get(transcript, "chapters") do
       nil ->
         {:error, "No chapters found in the transcript"}
 
@@ -159,11 +171,11 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
   defp log_missing_data_warning(paragraphs_data, sentences_data) do
     if paragraphs_data == %{} or sentences_data == %{} do
       Logger.warning("""
-      Missing paragraphs or sentences data. For comprehensive conversion results, it's recommended to include both paragraphs and sentences data. 
+      Missing paragraphs or sentences data. For comprehensive conversion results, it's recommended to include both paragraphs and sentences data.
 
       See AssemblyAI documentation for details: https://www.assemblyai.com/docs/api-reference/transcript
 
-      /v2/transcript/:id/sentences 
+      /v2/transcript/:id/sentences
       /v2/transcript/:id/paragraphs
       """)
     end
