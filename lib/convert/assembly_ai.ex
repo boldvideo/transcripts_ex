@@ -67,7 +67,7 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
       "WEBVTT\n\n1\n00:00:01.000 --> 00:00:05.000\nChapter 1\n\nSummary of chapter 1\n\n"
 
   """
-  def chapters_to_webvtt(transcript, _opts) when is_map(transcript) do
+  def chapters_to_webvtt(transcript, _opts \\ []) when is_map(transcript) do
     case Map.get(transcript, "chapters") do
       nil ->
         {:error, "No chapters found in the transcript"}
