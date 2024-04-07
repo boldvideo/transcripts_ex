@@ -5,6 +5,8 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
 
   require Logger
 
+  alias BoldTranscriptsEx.Utils
+
   @doc """
   Converts an AssemblyAI transcript to the Bold Transcript format.
 
@@ -23,17 +25,9 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
       {:ok, %{"metadata" => metadata, "utterances" => utterances, "paragraphs" => paragraphs}}
 
   """
-  def transcript_to_bold(transcript, opts \\ [])
-
   def transcript_to_bold(transcript, opts) do
-    transcript
-    |> Jason.decode!()
-    |> transcript_to_bold(opts)
-  end
-
-  def transcript_to_bold(transcript, opts) do
-    paragraphs_data = Keyword.get(opts, :paragraphs, %{}) |> Jason.decode!()
-    sentences_data = Keyword.get(opts, :sentences, %{}) |> Jason.decode!()
+    paragraphs_data = Keyword.get(opts, :paragraphs, %{}) |> Utils.maybe_decode()
+    sentences_data = Keyword.get(opts, :sentences, %{}) |> Utils.maybe_decode()
     speakers = extract_speakers(transcript["utterances"])
 
     # Warning if paragraphs or sentences data is missing
@@ -73,14 +67,6 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
       "WEBVTT\n\n1\n00:00:01.000 --> 00:00:05.000\nChapter 1\n\nSummary of chapter 1\n\n"
 
   """
-  def chapters_to_webvtt(transcript, opts \\ [])
-
-  def chapters_to_webvtt(transcript, opts) when is_binary(transcript) do
-    transcript
-    |> Jason.decode!()
-    |> chapters_to_webvtt(opts)
-  end
-
   def chapters_to_webvtt(transcript, _opts) when is_map(transcript) do
     case Map.get(transcript, "chapters") do
       nil ->
