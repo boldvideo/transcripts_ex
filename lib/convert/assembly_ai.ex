@@ -76,8 +76,8 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
         chapters_vtt =
           Enum.with_index(chapters, 1)
           |> Enum.map(fn {chapter, index} ->
-            start_time = format_time(chapter["start"])
-            end_time = format_time(chapter["end"])
+            start_time = Utils.format_chapter_timestamp(chapter["start"])
+            end_time = Utils.format_chapter_timestamp(chapter["end"])
             # title = chapter["headline"]
             # summary = chapter["summary"]
             # using gist instead of summary because it's more concise
@@ -130,19 +130,6 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
     |> Map.update!("start", &(&1 / 1000.0))
     |> Map.update!("end", &(&1 / 1000.0))
   end
-
-  defp format_time(milliseconds) do
-    seconds = div(milliseconds, 1000)
-    hours = div(seconds, 3600)
-    minutes = div(rem(seconds, 3600), 60)
-    seconds = rem(seconds, 60)
-
-    format = fn number -> String.pad_leading(Integer.to_string(number), 2, "0") end
-    "#{format.(hours)}:#{format.(minutes)}:#{format.(seconds)}.000"
-  end
-
-  # # Fallback for non-map inputs
-  # defp convert_timestamps(_), do: %{}
 
   defp extract_speakers(utterances) when is_list(utterances) do
     utterances

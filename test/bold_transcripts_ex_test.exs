@@ -1,7 +1,8 @@
 defmodule BoldTranscriptsExTest do
-  alias BoldTranscriptsEx.WebVTT
   use ExUnit.Case
   doctest BoldTranscriptsEx
+
+  alias BoldTranscriptsEx.WebVTT
 
   require Logger
 

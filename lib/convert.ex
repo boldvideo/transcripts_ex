@@ -1,6 +1,7 @@
 defmodule BoldTranscriptsEx.Convert do
   require Logger
 
+  alias BoldTranscriptsEx.Convert.Common
   alias BoldTranscriptsEx.Utils
 
   def from(service, transcript_data, opts \\ [])
@@ -26,4 +27,15 @@ defmodule BoldTranscriptsEx.Convert do
   def chapters_to_webvtt(service, _transcript_json, _opts) do
     Logger.error("Conversion from #{service} is not implemented yet.")
   end
+
+  @doc """
+  Converts a text with one chapter per row into a WebVTT file.
+
+  # Example
+
+      iex> text_to_chapters_webvtt("00:00 Hello World\n00:37 Introduction\n01:59 The second part\n")
+      "WEBVTT\n\n1\n00:00:00.000 -> 00:00:37.000\nHello World\n\n2\n00:00:37.000 -> 00:01:59.000\nIntroduction\n3\n00:01:59.000 -> 00:"
+
+  """
+  defdelegate text_to_chapters_webvtt(input, total_duration), to: Common
 end
