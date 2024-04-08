@@ -3,8 +3,9 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
   Handles conversion of AssemblyAI transcription files to Bold format.
   """
 
-  alias Jason
   require Logger
+
+  alias BoldTranscriptsEx.Utils
 
   @doc """
   Converts an AssemblyAI transcript to the Bold Transcript format.
@@ -24,11 +25,10 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
       {:ok, %{"metadata" => metadata, "utterances" => utterances, "paragraphs" => paragraphs}}
 
   """
-  def transcript_to_bold(main_transcript, opts \\ []) do
-    transcript_data = Jason.decode!(main_transcript)
-    paragraphs_data = Keyword.get(opts, :paragraphs, %{}) |> Jason.decode!()
-    sentences_data = Keyword.get(opts, :sentences, %{}) |> Jason.decode!()
-    speakers = extract_speakers(transcript_data["utterances"])
+  def transcript_to_bold(transcript, opts) do
+    paragraphs_data = Keyword.get(opts, :paragraphs, %{}) |> Utils.maybe_decode()
+    sentences_data = Keyword.get(opts, :sentences, %{}) |> Utils.maybe_decode()
+    speakers = extract_speakers(transcript["utterances"])
 
     # Warning if paragraphs or sentences data is missing
     log_missing_data_warning(paragraphs_data, sentences_data)
@@ -40,8 +40,8 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
         else: paragraphs_data
 
     merged_data = %{
-      "metadata" => extract_metadata(transcript_data, speakers),
-      "utterances" => extract_speech(transcript_data["utterances"]),
+      "metadata" => extract_metadata(transcript, speakers),
+      "utterances" => extract_speech(transcript["utterances"]),
       "paragraphs" => paragraphs
     }
 
@@ -67,10 +67,8 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
       "WEBVTT\n\n1\n00:00:01.000 --> 00:00:05.000\nChapter 1\n\nSummary of chapter 1\n\n"
 
   """
-  def chapters_to_webvtt(transcript_json, _opts \\ []) do
-    transcript = Jason.decode!(transcript_json)
-
-    case Map.fetch!(transcript, "chapters") do
+  def chapters_to_webvtt(transcript, _opts \\ []) when is_map(transcript) do
+    case Map.get(transcript, "chapters") do
       nil ->
         {:error, "No chapters found in the transcript"}
 
@@ -78,8 +76,8 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
         chapters_vtt =
           Enum.with_index(chapters, 1)
           |> Enum.map(fn {chapter, index} ->
-            start_time = format_time(chapter["start"])
-            end_time = format_time(chapter["end"])
+            start_time = Utils.format_chapter_timestamp(chapter["start"])
+            end_time = Utils.format_chapter_timestamp(chapter["end"])
             # title = chapter["headline"]
             # summary = chapter["summary"]
             # using gist instead of summary because it's more concise
@@ -133,19 +131,6 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
     |> Map.update!("end", &(&1 / 1000.0))
   end
 
-  defp format_time(milliseconds) do
-    seconds = div(milliseconds, 1000)
-    hours = div(seconds, 3600)
-    minutes = div(rem(seconds, 3600), 60)
-    seconds = rem(seconds, 60)
-
-    format = fn number -> String.pad_leading(Integer.to_string(number), 2, "0") end
-    "#{format.(hours)}:#{format.(minutes)}:#{format.(seconds)}.000"
-  end
-
-  # # Fallback for non-map inputs
-  # defp convert_timestamps(_), do: %{}
-
   defp extract_speakers(utterances) when is_list(utterances) do
     utterances
     |> Enum.map(&Map.get(&1, "speaker"))
@@ -159,11 +144,11 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
   defp log_missing_data_warning(paragraphs_data, sentences_data) do
     if paragraphs_data == %{} or sentences_data == %{} do
       Logger.warning("""
-      Missing paragraphs or sentences data. For comprehensive conversion results, it's recommended to include both paragraphs and sentences data. 
+      Missing paragraphs or sentences data. For comprehensive conversion results, it's recommended to include both paragraphs and sentences data.
 
       See AssemblyAI documentation for details: https://www.assemblyai.com/docs/api-reference/transcript
 
-      /v2/transcript/:id/sentences 
+      /v2/transcript/:id/sentences
       /v2/transcript/:id/paragraphs
       """)
     end
