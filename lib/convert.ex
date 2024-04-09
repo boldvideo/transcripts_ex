@@ -31,11 +31,39 @@ defmodule BoldTranscriptsEx.Convert do
   @doc """
   Converts a text with one chapter per row into a WebVTT file.
 
-  # Example
+  ## Example
 
-      iex> text_to_chapters_webvtt("00:00 Hello World\n00:37 Introduction\n01:59 The second part\n")
-      "WEBVTT\n\n1\n00:00:00.000 -> 00:00:37.000\nHello World\n\n2\n00:00:37.000 -> 00:01:59.000\nIntroduction\n3\n00:01:59.000 -> 00:"
+      iex> Convert.text_to_chapters_webvtt(\"""
+      ...> 00:00 Hello World
+      ...> 01:59 The End
+      ...> \""", 155)
+      "WEBVTT\\n\\n1\\n00:00:00.000 -> 00:01:59.000\\nHello World\\n\\n2\\n00:01:59.000 -> 00:02:35.000\\nThe End\\n\\n"
 
   """
-  defdelegate text_to_chapters_webvtt(input, total_duration), to: Common
+  def text_to_chapters_webvtt(input, total_duration) do
+    Common.text_to_chapters_webvtt(input, total_duration)
+  end
+
+  @doc """
+  Converts a chapters WebVTT file to a text with one chapter per line and a short timestamp.
+
+  ## Example
+
+      iex> Convert.chapters_webvtt_to_text(\"""
+      ...> WEBVTT
+      ...>
+      ...> 1
+      ...> 00:00:00.000 -> 00:00:37.000
+      ...> Hello World
+      ...>
+      ...> 2
+      ...> 00:00:37.000 -> 00:01:59.000
+      ...> Introduction
+      ...> \""")
+      "00:00 Hello World\\n00:37 Introduction"
+
+  """
+  def chapters_webvtt_to_text(input) do
+    Common.chapters_webvtt_to_text(input)
+  end
 end

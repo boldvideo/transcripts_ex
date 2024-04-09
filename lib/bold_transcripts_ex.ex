@@ -5,7 +5,7 @@ defmodule BoldTranscriptsEx do
     sentences_data = File.read!("data/sentences.json")
 
     {:ok, converted_data} =
-      BoldTranscriptsEx.Convert.AssemblyAI.convert(transcript_data,
+      BoldTranscriptsEx.Convert.AssemblyAI.transcript_to_bold(transcript_data,
         paragraphs: paragraphs_data,
         sentences: sentences_data
       )

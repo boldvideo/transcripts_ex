@@ -76,8 +76,8 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
         chapters_vtt =
           Enum.with_index(chapters, 1)
           |> Enum.map(fn {chapter, index} ->
-            start_time = Utils.format_chapter_timestamp(chapter["start"])
-            end_time = Utils.format_chapter_timestamp(chapter["end"])
+            start_time = Utils.format_chapter_timestamp(chapter["start"], :millisecond)
+            end_time = Utils.format_chapter_timestamp(chapter["end"], :millisecond)
             # title = chapter["headline"]
             # summary = chapter["summary"]
             # using gist instead of summary because it's more concise
