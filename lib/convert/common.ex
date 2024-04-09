@@ -33,7 +33,7 @@ defmodule BoldTranscriptsEx.Convert.Common do
     end)
   end
 
-  @timestamp_and_text_regex ~r/((?<hours>\d{2}):)?(?<minutes>\d{2}):(?<seconds>\d{2}) (?<text>.*)/
+  @timestamp_and_text_regex ~r/((?<hours>\d{1,2}):)?(?<minutes>\d{1,2}):(?<seconds>\d{2}) (?<text>.*)/
 
   defp convert_row_to_chapter(row) do
     case Regex.named_captures(@timestamp_and_text_regex, row) do

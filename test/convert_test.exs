@@ -64,18 +64,40 @@ defmodule BoldTranscriptsEx.ConvertTest do
              """
     end
 
+    test "handles single-digit timestamps" do
+      input = "0:12 The Start\n02:33 The End\n\n"
+      output = Convert.text_to_chapters_webvtt(input, 155)
+
+      assert output == """
+             WEBVTT
+
+             1
+             00:00:12.000 -> 00:02:33.000
+             The Start
+
+             2
+             00:02:33.000 -> 00:02:35.000
+             The End
+
+             """
+    end
+
     test "handles hour timestamps as well" do
-      input = "00:00 The Start\n01:02:33 The End\n\n"
+      input = "00:00 The Start\n1:00:01 Introduction\n01:02:33 The End\n\n"
       output = Convert.text_to_chapters_webvtt(input, 3755)
 
       assert output == """
              WEBVTT
 
              1
-             00:00:00.000 -> 01:02:33.000
+             00:00:00.000 -> 01:00:01.000
              The Start
 
              2
+             01:00:01.000 -> 01:02:33.000
+             Introduction
+
+             3
              01:02:33.000 -> 01:02:35.000
              The End
 
