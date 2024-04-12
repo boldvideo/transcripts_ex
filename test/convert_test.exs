@@ -14,15 +14,15 @@ defmodule BoldTranscriptsEx.ConvertTest do
              WEBVTT
 
              1
-             00:00:00.000 -> 00:00:37.000
+             00:00:00.000 --> 00:00:37.000
              Hello World
 
              2
-             00:00:37.000 -> 00:01:59.000
+             00:00:37.000 --> 00:01:59.000
              Introduction
 
              3
-             00:01:59.000 -> 00:02:35.000
+             00:01:59.000 --> 00:02:35.000
              The End
 
              """
@@ -36,11 +36,11 @@ defmodule BoldTranscriptsEx.ConvertTest do
              WEBVTT
 
              1
-             00:00:00.000 -> 00:02:12.000
+             00:00:00.000 --> 00:02:12.000
              Hello World
 
              2
-             00:02:12.000 -> 00:02:35.000
+             00:02:12.000 --> 00:02:35.000
              The End
 
              """
@@ -54,11 +54,11 @@ defmodule BoldTranscriptsEx.ConvertTest do
              WEBVTT
 
              1
-             00:00:30.000 -> 00:01:59.000
+             00:00:30.000 --> 00:01:59.000
              Hello World
 
              2
-             00:01:59.000 -> 00:02:35.000
+             00:01:59.000 --> 00:02:35.000
              The End
 
              """
@@ -72,11 +72,11 @@ defmodule BoldTranscriptsEx.ConvertTest do
              WEBVTT
 
              1
-             00:00:12.000 -> 00:02:33.000
+             00:00:12.000 --> 00:02:33.000
              The Start
 
              2
-             00:02:33.000 -> 00:02:35.000
+             00:02:33.000 --> 00:02:35.000
              The End
 
              """
@@ -90,16 +90,34 @@ defmodule BoldTranscriptsEx.ConvertTest do
              WEBVTT
 
              1
-             00:00:00.000 -> 01:00:01.000
+             00:00:00.000 --> 01:00:01.000
              The Start
 
              2
-             01:00:01.000 -> 01:02:33.000
+             01:00:01.000 --> 01:02:33.000
              Introduction
 
              3
-             01:02:33.000 -> 01:02:35.000
+             01:02:33.000 --> 01:02:35.000
              The End
+
+             """
+    end
+
+    test "handles floats as end timestamps" do
+      input = "00:00 The Start\n01:10 Introduction\n\n"
+      output = Convert.text_to_chapters_webvtt(input, 155.321)
+
+      assert output == """
+             WEBVTT
+
+             1
+             00:00:00.000 --> 00:01:10.000
+             The Start
+
+             2
+             00:01:10.000 --> 00:02:35.321
+             Introduction
 
              """
     end
@@ -116,15 +134,15 @@ defmodule BoldTranscriptsEx.ConvertTest do
       WEBVTT
 
       1
-      00:00:00.000 -> 00:00:37.000
+      00:00:00.000 --> 00:00:37.000
       Hello World
 
       2
-      00:00:37.000 -> 00:01:59.000
+      00:00:37.000 --> 00:01:59.000
       Introduction
 
       3
-      00:01:59.000 -> 00:02:35.000
+      00:01:59.000 --> 00:02:35.000
       The End
       """
 

@@ -29,7 +29,7 @@ defmodule BoldTranscriptsEx.Convert.Common do
       timestamp = Utils.format_chapter_timestamp(row.seconds, :second)
       next_timestamp = Utils.format_chapter_timestamp(next_row.seconds, :second)
 
-      acc <> "#{idx}\n#{timestamp} -> #{next_timestamp}\n#{row.text}\n\n"
+      acc <> "#{idx}\n#{timestamp} --> #{next_timestamp}\n#{row.text}\n\n"
     end)
   end
 

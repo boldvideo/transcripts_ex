@@ -37,7 +37,7 @@ defmodule BoldTranscriptsEx.Convert do
       ...> 00:00 Hello World
       ...> 01:59 The End
       ...> \""", 155)
-      "WEBVTT\\n\\n1\\n00:00:00.000 -> 00:01:59.000\\nHello World\\n\\n2\\n00:01:59.000 -> 00:02:35.000\\nThe End\\n\\n"
+      "WEBVTT\\n\\n1\\n00:00:00.000 --> 00:01:59.000\\nHello World\\n\\n2\\n00:01:59.000 --> 00:02:35.000\\nThe End\\n\\n"
 
   """
   def text_to_chapters_webvtt(input, total_duration) do
@@ -53,11 +53,11 @@ defmodule BoldTranscriptsEx.Convert do
       ...> WEBVTT
       ...>
       ...> 1
-      ...> 00:00:00.000 -> 00:00:37.000
+      ...> 00:00:00.000 --> 00:00:37.000
       ...> Hello World
       ...>
       ...> 2
-      ...> 00:00:37.000 -> 00:01:59.000
+      ...> 00:00:37.000 --> 00:01:59.000
       ...> Introduction
       ...> \""")
       "00:00 Hello World\\n00:37 Introduction"
