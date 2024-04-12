@@ -104,6 +104,24 @@ defmodule BoldTranscriptsEx.ConvertTest do
              """
     end
 
+    test "handles floats as end timestamps" do
+      input = "00:00 The Start\n01:10 Introduction\n\n"
+      output = Convert.text_to_chapters_webvtt(input, 155.321)
+
+      assert output == """
+             WEBVTT
+
+             1
+             00:00:00.000 -> 00:01:10.000
+             The Start
+
+             2
+             00:01:10.000 -> 00:02:35.321
+             Introduction
+
+             """
+    end
+
     test "returns nil if no valid chapters can be found" do
       input = "01: The End\n"
       assert Convert.text_to_chapters_webvtt(input, 155) == nil
