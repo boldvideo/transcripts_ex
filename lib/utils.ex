@@ -6,8 +6,8 @@ defmodule BoldTranscriptsEx.Utils do
     Jason.decode!(json)
   end
 
-  def maybe_decode(json) when is_map(json) do
-    json
+  def maybe_decode(data) when is_map(data) or is_list(data) do
+    data
   end
 
   @doc """
