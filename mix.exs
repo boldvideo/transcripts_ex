@@ -4,7 +4,7 @@ defmodule BoldTranscriptsEx.MixProject do
   def project do
     [
       app: :bold_transcripts_ex,
-      version: "0.3.4",
+      version: "0.4.0",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
       deps: deps()
