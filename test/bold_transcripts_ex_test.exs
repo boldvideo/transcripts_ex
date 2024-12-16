@@ -10,7 +10,11 @@ defmodule BoldTranscriptsExTest do
   describe "AssemblyAI Transcripts" do
     setup do
       transcript = load_json_from_file("test/support/data/assembly_transcript_ig.json")
-      {:ok, transcript: transcript}
+
+      demo_transcript =
+        load_json_from_file("test/support/data/bold_demo_assembly_transcript.json")
+
+      {:ok, transcript: transcript, demo_transcript: demo_transcript}
     end
 
     test "converts transcript to Bold format", %{transcript: transcript} do
@@ -48,6 +52,34 @@ defmodule BoldTranscriptsExTest do
         assert Map.has_key?(paragraph, "end")
         assert Map.has_key?(paragraph, "sentences")
       end
+    end
+
+    test "converts transcript without paragraphs and sentences", %{demo_transcript: transcript} do
+      {:ok, result} = BoldTranscriptsEx.Convert.from(:assemblyai, transcript)
+
+      assert is_map(result)
+      assert Map.has_key?(result, "metadata")
+      assert Map.has_key?(result, "utterances")
+      assert Map.has_key?(result, "paragraphs")
+
+      # Check metadata structure
+      assert is_map(result["metadata"])
+      assert result["metadata"]["duration"] == 118
+      assert result["metadata"]["language"] == "en"
+      assert result["metadata"]["source_url"] =~ "bold-eu1-uploads"
+      assert result["metadata"]["speakers"] == ["A"]
+
+      # Check utterances structure
+      assert is_list(result["utterances"])
+      assert length(result["utterances"]) > 0
+      utterance = List.first(result["utterances"])
+      assert Map.has_key?(utterance, "start")
+      assert Map.has_key?(utterance, "end")
+      assert Map.has_key?(utterance, "confidence")
+      assert Map.has_key?(utterance, "text")
+
+      # Check paragraphs structure (should be empty)
+      assert result["paragraphs"] == []
     end
 
     test "chapters to WebVTT", %{transcript: transcript} do

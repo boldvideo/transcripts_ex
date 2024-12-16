@@ -28,19 +28,23 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
   def transcript_to_bold(transcript, opts) do
     paragraphs_data = Keyword.get(opts, :paragraphs, []) |> Utils.maybe_decode()
     sentences_data = Keyword.get(opts, :sentences, []) |> Utils.maybe_decode()
-    speakers = extract_speakers(transcript["utterances"])
+    speakers = extract_speakers(transcript["utterances"] || [])
 
     # Warning if paragraphs or sentences data is missing
     log_missing_data_warning(paragraphs_data, sentences_data)
 
     paragraphs =
-      if paragraphs_data != [] and sentences_data != [],
-        do: merge_paragraphs_sentences(paragraphs_data, sentences_data),
-        else: paragraphs_data
+      case {paragraphs_data, sentences_data} do
+        {%{"paragraphs" => p}, %{"sentences" => s}} when is_list(p) and is_list(s) ->
+          merge_paragraphs_sentences(p, s)
+
+        _ ->
+          []
+      end
 
     merged_data = %{
       "metadata" => extract_metadata(transcript, speakers),
-      "utterances" => extract_speech(transcript["utterances"]),
+      "utterances" => extract_speech(transcript["utterances"] || []),
       "paragraphs" => paragraphs
     }
 
@@ -105,7 +109,9 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
     Enum.map(paragraphs, fn par ->
       merged_sentences =
         sentences
-        |> Enum.filter(fn sen -> sen["start"] >= par["start"] && sen["end"] <= par["end"] end)
+        |> Enum.filter(fn sen ->
+          sen["start"] >= par["start"] && sen["end"] <= par["end"]
+        end)
         |> extract_speech()
 
       Map.put(par, "sentences", merged_sentences)
@@ -116,7 +122,9 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
 
   defp extract_speech(data) do
     Enum.map(data, fn sentence ->
-      words_converted = Enum.map(sentence["words"], &convert_timestamps/1)
+      words_converted =
+        (sentence["words"] || [])
+        |> Enum.map(&convert_timestamps/1)
 
       sentence
       |> convert_timestamps()
@@ -141,7 +149,7 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
   defp extract_speakers(_), do: []
 
   defp log_missing_data_warning(paragraphs_data, sentences_data) do
-    if paragraphs_data == %{} or sentences_data == %{} do
+    if paragraphs_data == [] or sentences_data == [] do
       Logger.warning("""
       Missing paragraphs or sentences data. For comprehensive conversion results, it's recommended to include both paragraphs and sentences data.
 
