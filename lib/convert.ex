@@ -2,14 +2,38 @@ defmodule BoldTranscriptsEx.Convert do
   require Logger
 
   alias BoldTranscriptsEx.Convert.Common
+  alias BoldTranscriptsEx.Convert.AssemblyAI
+  alias BoldTranscriptsEx.Convert.Deepgram
   alias BoldTranscriptsEx.Utils
 
+  @doc """
+  Converts a transcript from a specific service to Bold format.
+
+  ## Parameters
+
+  - `service`: The service that generated the transcript (e.g., `:assemblyai`, `:deepgram`)
+  - `transcript_data`: The JSON string or decoded map of the transcript data
+  - `opts`: Options for the conversion:
+    - `:language`: (required for Deepgram) The language code of the transcript (e.g., "en", "lt")
+    - Other service-specific options
+
+  ## Returns
+
+  - `{:ok, data}`: A tuple with `:ok` atom and the data in Bold Transcript format
+  - `{:error, reason}`: If the conversion fails or required options are missing
+  """
   def from(service, transcript_data, opts \\ [])
 
   def from(:assemblyai, transcript_json, opts) do
     transcript_json
     |> Utils.maybe_decode()
-    |> BoldTranscriptsEx.Convert.AssemblyAI.transcript_to_bold(opts)
+    |> AssemblyAI.transcript_to_bold(opts)
+  end
+
+  def from(:deepgram, transcript_json, opts) do
+    transcript_json
+    |> Utils.maybe_decode()
+    |> Deepgram.transcript_to_bold(opts)
   end
 
   def from(service, _transcript_data, _opts) do
@@ -21,7 +45,7 @@ defmodule BoldTranscriptsEx.Convert do
   def chapters_to_webvtt(:assemblyai, transcript_json, opts) do
     transcript_json
     |> Utils.maybe_decode()
-    |> BoldTranscriptsEx.Convert.AssemblyAI.chapters_to_webvtt(opts)
+    |> AssemblyAI.chapters_to_webvtt(opts)
   end
 
   def chapters_to_webvtt(service, _transcript_json, _opts) do

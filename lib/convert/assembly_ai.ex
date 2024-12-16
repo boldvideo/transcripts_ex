@@ -26,17 +26,16 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
 
   """
   def transcript_to_bold(transcript, opts) do
-    paragraphs_data = Keyword.get(opts, :paragraphs, %{}) |> Utils.maybe_decode()
-    sentences_data = Keyword.get(opts, :sentences, %{}) |> Utils.maybe_decode()
+    paragraphs_data = Keyword.get(opts, :paragraphs, []) |> Utils.maybe_decode()
+    sentences_data = Keyword.get(opts, :sentences, []) |> Utils.maybe_decode()
     speakers = extract_speakers(transcript["utterances"])
 
     # Warning if paragraphs or sentences data is missing
     log_missing_data_warning(paragraphs_data, sentences_data)
 
     paragraphs =
-      if paragraphs_data != %{} and sentences_data != %{},
-        do:
-          merge_paragraphs_sentences(paragraphs_data["paragraphs"], sentences_data["sentences"]),
+      if paragraphs_data != [] and sentences_data != [],
+        do: merge_paragraphs_sentences(paragraphs_data, sentences_data),
         else: paragraphs_data
 
     merged_data = %{
