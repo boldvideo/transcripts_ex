@@ -4,12 +4,16 @@ defmodule BoldTranscriptsEx.MixProject do
   def project do
     [
       app: :bold_transcripts_ex,
-      version: "0.4.2",
+      version: "0.5.1",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       description: description(),
-      package: package()
+      package: package(),
+      docs: [
+        main: "readme",
+        extras: ["README.md"]
+      ]
     ]
   end
 
@@ -23,9 +27,8 @@ defmodule BoldTranscriptsEx.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:jason, "~> 1.4"}
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:jason, "~> 1.4"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 
@@ -40,7 +43,8 @@ defmodule BoldTranscriptsEx.MixProject do
     [
       licenses: ["MIT"],
       links: %{
-        "GitHub" => "https://github.com/bold-app/bold_transcripts_ex"
+        "GitHub" => "https://github.com/bold-app/bold_transcripts_ex",
+        "Bold Video" => "https://bold.video"
       }
     ]
   end
