@@ -2,6 +2,7 @@ defmodule BoldTranscriptsEx.WebVTTTest do
   use ExUnit.Case
 
   alias BoldTranscriptsEx.WebVTT
+  alias BoldTranscriptsEx.Utils.Chapters
 
   @chapters_vtt_file "test/support/data/chapters.vtt"
 
@@ -39,7 +40,7 @@ defmodule BoldTranscriptsEx.WebVTTTest do
       ]
 
       # Call the function under test
-      actual_chapters = WebVTT.parse_chapters(chapters_vtt_content)
+      actual_chapters = Chapters.parse_chapters(chapters_vtt_content)
 
       # Assert that the parsed chapters match the expected output
       assert actual_chapters == expected_chapters
@@ -80,10 +81,215 @@ defmodule BoldTranscriptsEx.WebVTTTest do
       Last Chapter
       """
 
-      actual_webvtt_content = BoldTranscriptsEx.WebVTT.chapters_to_webvtt(chapters)
+      actual_webvtt_content = Chapters.chapters_to_webvtt(chapters)
 
       assert String.trim_trailing(actual_webvtt_content) ==
                String.trim_trailing(expected_webvtt_content)
+    end
+  end
+
+  describe "generate_subtitles/1" do
+    test "generates WebVTT subtitles from a Bold transcript without speaker labels for single letters" do
+      transcript = %{
+        "metadata" => %{
+          "speakers" => %{
+            "A" => nil,
+            "B" => nil
+          }
+        },
+        "utterances" => [
+          %{
+            "speaker" => "A",
+            "start" => 0.8,
+            "end" => 3.032,
+            "text" => "Hey. let me ask you something. You know all",
+            "words" => [
+              %{
+                "start" => 0.8,
+                "end" => 1.12,
+                "word" => "Hey.",
+                "speaker" => "A"
+              },
+              %{
+                "start" => 1.16,
+                "end" => 1.352,
+                "word" => "let me ask you something.",
+                "speaker" => "A"
+              },
+              %{
+                "start" => 2.48,
+                "end" => 3.032,
+                "word" => "You know all",
+                "speaker" => "A"
+              }
+            ]
+          }
+        ]
+      }
+
+      expected_output = """
+      WEBVTT
+
+      1
+      00:00:00.800 --> 00:00:01.352
+      Hey. let me ask you something.
+
+      2
+      00:00:02.480 --> 00:00:03.032
+      You know all
+      """
+
+      assert String.trim(WebVTT.generate_subtitles(transcript)) == String.trim(expected_output)
+    end
+
+    test "uses WebVTT <v> tag for named speakers from metadata map" do
+      transcript = %{
+        "metadata" => %{
+          "speakers" => %{
+            "A" => "John Smith",
+            "B" => "Jane Doe",
+            # Speaker without name
+            "C" => nil
+          }
+        },
+        "utterances" => [
+          %{
+            "words" => [
+              %{
+                "start" => 0.8,
+                "end" => 1.12,
+                "word" => "Hello",
+                "speaker" => "A"
+              }
+            ],
+            "speaker" => "A"
+          },
+          %{
+            "words" => [
+              %{
+                "start" => 1.16,
+                "end" => 1.352,
+                "word" => "Hi",
+                "speaker" => "B"
+              }
+            ],
+            "speaker" => "B"
+          },
+          %{
+            "words" => [
+              %{
+                "start" => 2.16,
+                "end" => 2.352,
+                "word" => "Hey",
+                "speaker" => "C"
+              }
+            ],
+            "speaker" => nil
+          }
+        ]
+      }
+
+      expected_output = """
+      WEBVTT
+
+      1
+      00:00:00.800 --> 00:00:01.120
+      <v John Smith>Hello</v>
+
+      2
+      00:00:01.160 --> 00:00:01.352
+      <v Jane Doe>Hi</v>
+
+      3
+      00:00:02.160 --> 00:00:02.352
+      Hey
+      """
+
+      assert String.trim(WebVTT.generate_subtitles(transcript)) == String.trim(expected_output)
+    end
+
+    test "handles missing speaker labels" do
+      transcript = %{
+        "utterances" => [
+          %{
+            "words" => [
+              %{
+                "start" => 0.8,
+                "end" => 1.12,
+                "word" => "Hello"
+              }
+            ],
+            "speaker" => nil
+          }
+        ]
+      }
+
+      expected_output = """
+      WEBVTT
+
+      1
+      00:00:00.800 --> 00:00:01.120
+      Hello
+      """
+
+      assert String.trim(WebVTT.generate_subtitles(transcript)) == String.trim(expected_output)
+    end
+
+    test "handles speaker metadata correctly through JSON serialization" do
+      transcript = %{
+        "metadata" => %{
+          "speakers" => %{
+            "A" => nil,
+            "B" => "Jane Doe",
+            "C" => nil
+          }
+        },
+        "utterances" => [
+          %{
+            "words" => [
+              %{
+                "start" => 0.8,
+                "end" => 1.12,
+                "word" => "Hello",
+                "speaker" => "A"
+              }
+            ],
+            "speaker" => "A"
+          },
+          %{
+            "words" => [
+              %{
+                "start" => 1.16,
+                "end" => 1.352,
+                "word" => "Hi",
+                "speaker" => "B"
+              }
+            ],
+            "speaker" => "B"
+          }
+        ]
+      }
+
+      # Convert to JSON and back
+      json = Jason.encode!(transcript)
+      decoded_transcript = Jason.decode!(json)
+
+      # Generate WebVTT from the decoded transcript
+      result = WebVTT.generate_subtitles(decoded_transcript)
+
+      expected_output = """
+      WEBVTT
+
+      1
+      00:00:00.800 --> 00:00:01.120
+      Hello
+
+      2
+      00:00:01.160 --> 00:00:01.352
+      <v Jane Doe>Hi</v>
+      """
+
+      assert String.trim(result) == String.trim(expected_output)
     end
   end
 end
