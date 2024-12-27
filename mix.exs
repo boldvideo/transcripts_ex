@@ -43,7 +43,7 @@ defmodule BoldTranscriptsEx.MixProject do
     [
       licenses: ["MIT"],
       links: %{
-        "GitHub" => "https://github.com/bold-app/bold_transcripts_ex",
+        "GitHub" => "https://github.com/boldvideo/transcripts_ex",
         "Bold Video" => "https://bold.video"
       }
     ]
