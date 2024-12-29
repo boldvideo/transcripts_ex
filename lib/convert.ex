@@ -4,6 +4,7 @@ defmodule BoldTranscriptsEx.Convert do
   alias BoldTranscriptsEx.Convert.Common
   alias BoldTranscriptsEx.Convert.AssemblyAI
   alias BoldTranscriptsEx.Convert.Deepgram
+  alias BoldTranscriptsEx.Convert.Speechmatics
   alias BoldTranscriptsEx.Utils
 
   @doc """
@@ -34,6 +35,12 @@ defmodule BoldTranscriptsEx.Convert do
     transcript_json
     |> Utils.maybe_decode()
     |> Deepgram.transcript_to_bold(opts)
+  end
+
+  def from(:speechmatics, transcript_json, _opts) do
+    transcript_json
+    |> Utils.maybe_decode()
+    |> Speechmatics.transcript_to_bold()
   end
 
   def from(service, _transcript_data, _opts) do
