@@ -12,7 +12,7 @@ Add `bold_transcripts_ex` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:bold_transcripts_ex, "~> 0.5.1"}
+    {:bold_transcripts_ex, "~> 0.6.0"}
   ]
 end
 ```
