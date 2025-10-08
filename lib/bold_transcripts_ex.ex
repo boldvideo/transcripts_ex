@@ -33,7 +33,7 @@ defmodule BoldTranscriptsEx do
       {:ok, %{
         "metadata" => %{
           "duration" => 10.5,
-          "language" => "en",
+          "language" => "en_us",
           "source_url" => "https://example.com/audio.mp3",
           "speakers" => %{},
           "source_model" => "",

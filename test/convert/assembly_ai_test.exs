@@ -12,7 +12,7 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAITest do
       {:ok, result} = AssemblyAI.transcript_to_bold(transcript, version: 2)
 
       assert result["metadata"]["duration"] == 118.0
-      assert result["metadata"]["language"] == "en"
+      assert result["metadata"]["language"] == "en_us"
       assert result["metadata"]["source_url"] == "https://example.com/audio.mp3"
       assert result["metadata"]["speakers"] == %{"A" => nil}
 

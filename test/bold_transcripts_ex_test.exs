@@ -54,7 +54,7 @@ defmodule BoldTranscriptsExTest do
       # Check metadata structure
       assert is_map(result["metadata"])
       assert result["metadata"]["duration"] == 118
-      assert result["metadata"]["language"] == "en"
+      assert result["metadata"]["language"] == "en_us"
       assert result["metadata"]["source_url"] =~ "bold-eu1-uploads"
       assert result["metadata"]["speakers"] == %{"A" => nil}
 

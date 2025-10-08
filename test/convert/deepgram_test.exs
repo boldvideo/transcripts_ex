@@ -12,7 +12,7 @@ defmodule BoldTranscriptsEx.Convert.DeepgramTest do
       {:ok, result} = Deepgram.transcript_to_bold(transcript, language: "en", version: 2)
 
       assert result["metadata"]["duration"] == 117.85469
-      assert result["metadata"]["language"] == "en"
+      assert result["metadata"]["language"] == "en_us"
       assert result["metadata"]["source_vendor"] == "deepgram"
       assert result["metadata"]["speakers"] == %{"A" => nil}
 

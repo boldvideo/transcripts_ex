@@ -10,6 +10,7 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
 
   require Logger
 
+  alias BoldTranscriptsEx.Convert.Language
   alias BoldTranscriptsEx.Utils
 
   @supported_versions [1, 2]
@@ -164,7 +165,7 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
     %{
       "version" => "2.0",
       "duration" => data["audio_duration"],
-      "language" => data["language_code"],
+      "language" => Language.normalize_assemblyai(data["language_code"]),
       "source_url" => data["audio_url"],
       "source_vendor" => "assemblyai",
       "source_model" => data["model_version"] || "",
@@ -178,7 +179,7 @@ defmodule BoldTranscriptsEx.Convert.AssemblyAI do
   defp build_metadata_v1(data, speakers) do
     %{
       "duration" => data["audio_duration"],
-      "language" => data["language_code"],
+      "language" => Language.normalize_assemblyai(data["language_code"]),
       "source_url" => data["audio_url"],
       "speakers" => speakers
     }

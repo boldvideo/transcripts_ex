@@ -5,6 +5,7 @@ defmodule BoldTranscriptsEx.Convert.Speechmatics do
 
   require Logger
 
+  alias BoldTranscriptsEx.Convert.Language
   alias BoldTranscriptsEx.Utils
 
   def transcript_to_bold(transcript) do
@@ -27,7 +28,7 @@ defmodule BoldTranscriptsEx.Convert.Speechmatics do
     %{
       "version" => "2.0",
       "duration" => data["job"]["duration"],
-      "language" => data["metadata"]["transcription_config"]["language"],
+      "language" => Language.normalize_speechmatics(data["metadata"]["transcription_config"]["language"]),
       "source_url" => "",
       "source_vendor" => "speechmatics",
       "source_model" => data["metadata"]["transcription_config"]["operating_point"] || "",

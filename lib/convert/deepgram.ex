@@ -5,6 +5,7 @@ defmodule BoldTranscriptsEx.Convert.Deepgram do
 
   require Logger
 
+  alias BoldTranscriptsEx.Convert.Language
   alias BoldTranscriptsEx.Utils
 
   @doc """
@@ -88,11 +89,11 @@ defmodule BoldTranscriptsEx.Convert.Deepgram do
     case {user_language, detected_language} do
       # User provided language takes precedence
       {lang, _} when is_binary(lang) ->
-        {:ok, lang}
+        {:ok, Language.normalize_deepgram(lang)}
 
       # Fall back to detected language
       {nil, lang} when is_binary(lang) ->
-        {:ok, lang}
+        {:ok, Language.normalize_deepgram(lang)}
 
       _ ->
         {:error,
