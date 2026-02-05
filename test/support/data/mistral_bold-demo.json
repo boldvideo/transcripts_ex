@@ -1,0 +1,170 @@
+{
+  "text": "Welcome to the Bold Video demo. Today we'll be discussing our new transcription features. That sounds great. I'm really excited to show what we've built. So let's start with the basics. Our platform now supports multiple speech to text vendors. That's right. And the best part is that all transcripts get converted to a unified format. Which makes it really easy to switch between providers. Exactly. Users don't have to worry about vendor lock-in anymore.",
+  "segments": [
+    {
+      "id": 0,
+      "start": 0,
+      "end": 3.84,
+      "text": "Welcome to the Bold Video demo.",
+      "speaker": "speaker_0",
+      "words": [
+        {"word": "Welcome", "start": 0, "end": 0.48},
+        {"word": "to", "start": 0.52, "end": 0.64},
+        {"word": "the", "start": 0.68, "end": 0.8},
+        {"word": "Bold", "start": 0.84, "end": 1.12},
+        {"word": "Video", "start": 1.16, "end": 1.52},
+        {"word": "demo.", "start": 1.56, "end": 3.84}
+      ]
+    },
+    {
+      "id": 1,
+      "start": 4.2,
+      "end": 8.96,
+      "text": "Today we'll be discussing our new transcription features.",
+      "speaker": "speaker_0",
+      "words": [
+        {"word": "Today", "start": 4.2, "end": 4.56},
+        {"word": "we'll", "start": 4.6, "end": 4.84},
+        {"word": "be", "start": 4.88, "end": 5.0},
+        {"word": "discussing", "start": 5.04, "end": 5.68},
+        {"word": "our", "start": 5.72, "end": 5.92},
+        {"word": "new", "start": 5.96, "end": 6.16},
+        {"word": "transcription", "start": 6.2, "end": 7.04},
+        {"word": "features.", "start": 7.08, "end": 8.96}
+      ]
+    },
+    {
+      "id": 2,
+      "start": 9.52,
+      "end": 11.2,
+      "text": "That sounds great.",
+      "speaker": "speaker_1",
+      "words": [
+        {"word": "That", "start": 9.52, "end": 9.76},
+        {"word": "sounds", "start": 9.8, "end": 10.24},
+        {"word": "great.", "start": 10.28, "end": 11.2}
+      ]
+    },
+    {
+      "id": 3,
+      "start": 11.68,
+      "end": 15.36,
+      "text": "I'm really excited to show what we've built.",
+      "speaker": "speaker_1",
+      "words": [
+        {"word": "I'm", "start": 11.68, "end": 11.92},
+        {"word": "really", "start": 11.96, "end": 12.32},
+        {"word": "excited", "start": 12.36, "end": 12.88},
+        {"word": "to", "start": 12.92, "end": 13.04},
+        {"word": "show", "start": 13.08, "end": 13.36},
+        {"word": "what", "start": 13.4, "end": 13.6},
+        {"word": "we've", "start": 13.64, "end": 13.92},
+        {"word": "built.", "start": 13.96, "end": 15.36}
+      ]
+    },
+    {
+      "id": 4,
+      "start": 16.0,
+      "end": 18.72,
+      "text": "So let's start with the basics.",
+      "speaker": "speaker_0",
+      "words": [
+        {"word": "So", "start": 16.0, "end": 16.24},
+        {"word": "let's", "start": 16.28, "end": 16.56},
+        {"word": "start", "start": 16.6, "end": 16.96},
+        {"word": "with", "start": 17.0, "end": 17.2},
+        {"word": "the", "start": 17.24, "end": 17.36},
+        {"word": "basics.", "start": 17.4, "end": 18.72}
+      ]
+    },
+    {
+      "id": 5,
+      "start": 19.2,
+      "end": 24.48,
+      "text": "Our platform now supports multiple speech to text vendors.",
+      "speaker": "speaker_0",
+      "words": [
+        {"word": "Our", "start": 19.2, "end": 19.44},
+        {"word": "platform", "start": 19.48, "end": 20.08},
+        {"word": "now", "start": 20.12, "end": 20.4},
+        {"word": "supports", "start": 20.44, "end": 21.04},
+        {"word": "multiple", "start": 21.08, "end": 21.6},
+        {"word": "speech", "start": 21.64, "end": 22.0},
+        {"word": "to", "start": 22.04, "end": 22.16},
+        {"word": "text", "start": 22.2, "end": 22.56},
+        {"word": "vendors.", "start": 22.6, "end": 24.48}
+      ]
+    },
+    {
+      "id": 6,
+      "start": 25.0,
+      "end": 26.08,
+      "text": "That's right.",
+      "speaker": "speaker_1",
+      "words": [
+        {"word": "That's", "start": 25.0, "end": 25.36},
+        {"word": "right.", "start": 25.4, "end": 26.08}
+      ]
+    },
+    {
+      "id": 7,
+      "start": 26.56,
+      "end": 32.16,
+      "text": "And the best part is that all transcripts get converted to a unified format.",
+      "speaker": "speaker_1",
+      "words": [
+        {"word": "And", "start": 26.56, "end": 26.8},
+        {"word": "the", "start": 26.84, "end": 26.96},
+        {"word": "best", "start": 27.0, "end": 27.28},
+        {"word": "part", "start": 27.32, "end": 27.6},
+        {"word": "is", "start": 27.64, "end": 27.76},
+        {"word": "that", "start": 27.8, "end": 28.0},
+        {"word": "all", "start": 28.04, "end": 28.24},
+        {"word": "transcripts", "start": 28.28, "end": 29.04},
+        {"word": "get", "start": 29.08, "end": 29.28},
+        {"word": "converted", "start": 29.32, "end": 29.92},
+        {"word": "to", "start": 29.96, "end": 30.08},
+        {"word": "a", "start": 30.12, "end": 30.2},
+        {"word": "unified", "start": 30.24, "end": 30.72},
+        {"word": "format.", "start": 30.76, "end": 32.16}
+      ]
+    },
+    {
+      "id": 8,
+      "start": 32.8,
+      "end": 36.48,
+      "text": "Which makes it really easy to switch between providers.",
+      "speaker": "speaker_0",
+      "words": [
+        {"word": "Which", "start": 32.8, "end": 33.04},
+        {"word": "makes", "start": 33.08, "end": 33.44},
+        {"word": "it", "start": 33.48, "end": 33.6},
+        {"word": "really", "start": 33.64, "end": 34.0},
+        {"word": "easy", "start": 34.04, "end": 34.4},
+        {"word": "to", "start": 34.44, "end": 34.56},
+        {"word": "switch", "start": 34.6, "end": 34.96},
+        {"word": "between", "start": 35.0, "end": 35.36},
+        {"word": "providers.", "start": 35.4, "end": 36.48}
+      ]
+    },
+    {
+      "id": 9,
+      "start": 37.0,
+      "end": 42.24,
+      "text": "Exactly. Users don't have to worry about vendor lock-in anymore.",
+      "speaker": "speaker_1",
+      "words": [
+        {"word": "Exactly.", "start": 37.0, "end": 37.68},
+        {"word": "Users", "start": 37.84, "end": 38.24},
+        {"word": "don't", "start": 38.28, "end": 38.56},
+        {"word": "have", "start": 38.6, "end": 38.8},
+        {"word": "to", "start": 38.84, "end": 38.96},
+        {"word": "worry", "start": 39.0, "end": 39.36},
+        {"word": "about", "start": 39.4, "end": 39.68},
+        {"word": "vendor", "start": 39.72, "end": 40.08},
+        {"word": "lock-in", "start": 40.12, "end": 40.64},
+        {"word": "anymore.", "start": 40.68, "end": 42.24}
+      ]
+    }
+  ]
+}

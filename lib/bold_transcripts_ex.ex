@@ -3,7 +3,7 @@ defmodule BoldTranscriptsEx do
   BoldTranscriptsEx is a library for working with transcripts in the Bold Video platform.
 
   It provides functionality for:
-  - Converting transcripts from various vendors (AssemblyAI, Deepgram) to Bold format
+  - Converting transcripts from various vendors (AssemblyAI, Deepgram, Speechmatics, Mistral) to Bold format
   - Generating WebVTT subtitles from Bold transcripts
   - Working with chapter markers in WebVTT format
   """
@@ -15,7 +15,7 @@ defmodule BoldTranscriptsEx do
 
   ## Parameters
 
-  - `service`: The service that generated the transcript (e.g., `:assemblyai`, `:deepgram`)
+  - `service`: The service that generated the transcript (e.g., `:assemblyai`, `:deepgram`, `:speechmatics`, `:mistral`)
   - `transcript_data`: The JSON string or decoded map of the transcript data
   - `opts`: Options for the conversion:
     - `:language`: (required for Deepgram) The language code of the transcript (e.g., "en", "lt")

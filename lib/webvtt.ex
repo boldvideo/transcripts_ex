@@ -211,6 +211,9 @@ defmodule BoldTranscriptsEx.WebVTT do
 
   defp extract_speaker_names(_), do: %{}
 
+  defp format_subtitle_time(seconds) when is_integer(seconds),
+    do: format_subtitle_time(seconds * 1.0)
+
   defp format_subtitle_time(seconds) when is_float(seconds) do
     total_milliseconds = trunc(seconds * 1000)
     hours = div(total_milliseconds, 3_600_000)

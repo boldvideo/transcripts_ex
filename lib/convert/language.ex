@@ -116,6 +116,35 @@ defmodule BoldTranscriptsEx.Convert.Language do
   end
 
   @doc """
+  Normalizes Mistral Voxtral language codes to internal format.
+
+  Since Voxtral doesn't include language in its response, this normalizes
+  user-provided language codes (typically base language like "en", "de").
+
+  ## Examples
+
+      iex> BoldTranscriptsEx.Convert.Language.normalize_mistral("en")
+      "en_us"
+
+      iex> BoldTranscriptsEx.Convert.Language.normalize_mistral("de")
+      "de_de"
+
+      iex> BoldTranscriptsEx.Convert.Language.normalize_mistral("es")
+      "es_es"
+
+      iex> BoldTranscriptsEx.Convert.Language.normalize_mistral(nil)
+      "en_us"
+  """
+  def normalize_mistral(nil), do: "en_us"
+  def normalize_mistral(""), do: "en_us"
+
+  def normalize_mistral(code) when is_binary(code) do
+    code
+    |> String.downcase()
+    |> add_default_region()
+  end
+
+  @doc """
   Generic language code normalizer with fallback to en_us.
 
   ## Examples
