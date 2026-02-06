@@ -1,0 +1,22 @@
+# BoldTranscriptsEx
+
+> Elixir library for converting speech-to-text transcripts from AssemblyAI, Deepgram, Speechmatics, and Mistral to a unified Bold Video transcript format, with WebVTT subtitle generation.
+
+BoldTranscriptsEx converts vendor-specific transcript JSON into Bold Transcript Format v2.0, a unified structure with metadata, utterances, and word-level timing. It also generates WebVTT subtitles with smart line breaking (42 chars max, 2 lines max) and speaker labels.
+
+## Core API
+
+- [BoldTranscriptsEx.convert/3](https://hexdocs.pm/bold_transcripts_ex/BoldTranscriptsEx.html#convert/3): Convert vendor transcript to Bold format. Vendors: `:assemblyai`, `:deepgram`, `:speechmatics`, `:mistral`
+- [BoldTranscriptsEx.generate_subtitles/1](https://hexdocs.pm/bold_transcripts_ex/BoldTranscriptsEx.html#generate_subtitles/1): Generate WebVTT subtitles from Bold transcript
+- [BoldTranscriptsEx.chapters_to_webvtt/2](https://hexdocs.pm/bold_transcripts_ex/BoldTranscriptsEx.html#chapters_to_webvtt/2): Convert chapters to WebVTT chapter markers
+
+## Docs
+
+- [HexDocs API Reference](https://hexdocs.pm/bold_transcripts_ex): Full module documentation
+- [GitHub Repository](https://github.com/boldvideo/transcripts_ex): Source code and examples
+- [Hex.pm Package](https://hex.pm/packages/bold_transcripts_ex): Package listing and version history
+
+## Optional
+
+- [CHANGELOG](https://github.com/boldvideo/transcripts_ex/blob/main/CHANGELOG.md): Version history
+- [Bold Video](https://bold.video): Parent product

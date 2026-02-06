@@ -28,7 +28,8 @@ defmodule BoldTranscriptsEx.Convert.Speechmatics do
     %{
       "version" => "2.0",
       "duration" => data["job"]["duration"],
-      "language" => Language.normalize_speechmatics(data["metadata"]["transcription_config"]["language"]),
+      "language" =>
+        Language.normalize_speechmatics(data["metadata"]["transcription_config"]["language"]),
       "source_url" => "",
       "source_vendor" => "speechmatics",
       "source_model" => data["metadata"]["transcription_config"]["operating_point"] || "",
