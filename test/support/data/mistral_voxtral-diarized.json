@@ -1,0 +1,1693 @@
+{
+  "model": "voxtral-mini-latest",
+  "text": "I bet you thought we were done, right? Like five pillars in a single source of truth. We've got five videos covering those pillars. We're good, Jonna. I got it. I know we are so close, but there is one final topic to cover, which is bringing all five of these pillars in your single source of truth together. Because the real power of this system is not each individual pillar. It's how these pillars fit and automatically sync together to create one cohesive single source of truth that runs the day to day of your business. So I want to take some time here just to dive a little bit deeper into how all of these different pillars work and play together and give you a tactical example so that you can understand firsthand how having this new system running within your business with all five pillars firing on all cylinders is going to be absolutely transformative. So if you will bear with me, we have one final topic to cover together. And then I am going to walk you through building out and finalizing the tangible deliverable of all of this information, which is going to be the finished outline of your single source of truth. So let's dive into it by starting with a tangible, a tactical example about how each of these core pillars in the single source of truth work together seamlessly in the background to create one maximally efficient team for you and for your business. The example that I want to use is client onboarding, because traditionally client onboarding is a mess in just about every business I've ever looked at or worked with. Why? Because it's so complicated. It requires so many different steps from so many different people that need to happen in really tight order back to back to back as quickly as possible. And any mistake pisses off your client and really incurs a very real risk that they might leave. Right. Like mistakes in client onboarding totally destroy client trust and client experience. And we know how much that costs us in the form of lower client lifetime value. So client onboarding is a great one because it's super hard to do well and it's super high stakes. So let's talk about how we could use our single source of truth once it's all built out to make client onboarding not just fast, not just frictionless, but actually fully automated. I mentioned that when I ran a digital marketing agency, we were onboarding two to four clients a day, and that entire process happened on autopilot, meaning I did not look at it once. I trusted the system to run this incredibly complicated multi-step process without me. What did that look like? It looked something like this. So we had a new client. Our closer hopped on a call with them and closed them. Fantastic. As soon as that client hopped off the call, the very next step would be for my closer to fill out what we called a client onboarding form. You've got one form with all of the critical information about that client and everything that the back end team needs in order to be able to fulfill on that client service successfully. So beautiful. The closer fills out a client onboarding form. This had the added benefit of making sure that my back end team was never bothering my sales team because the sales team was handing off all of the critical information automatically to the back end team. And they never had to go back to sales and bother them in the middle of their important day taking calls to ask, where are we at with this client? Or what did that client agree to? Or what's their payment plan? All of that was added into the form. OK, beautiful. So the form is what kicked off the entire onboarding automation. From the form, two things happened. Number one, the onboarding SOP was duplicated and assigned. When we were small, this was literally just a VA. Every time a new client onboarding form came in and we got the notification in Slack, they would go into our onboarding SOP inside of our SOP warehouse. They would duplicate that checklist SOP template. They would assign the relevant account manager, the relevant media buyer, the entire fulfillment team to that client that needed to be present for that onboarding process. They would assign out every single task. They would set a due date for every single task, right? So whether this happens manually or if you want to make it fancy, you can do this automatically. The onboarding SOP got duplicated and assigned out. Beautiful. What happened then? All of those tasks got pushed to people's individual to-do lists. So again, I haven't seen a thing. I see a notification coming into Slack with a little hooray sign that we just got in. new client. And what I know is that automatically my entire team has been notified. They all know exactly what tasks they now need to get done by what date. And all of those tasks are sitting in their individual to-do lists, just waiting to get done on the appropriate deadline. Gorgeous. So I can now trust that my client is going to get onboarded seamlessly. I also know that if any individual member of my team gets stuck or blocked or the client onboarding gets off track and slowed down, then those issues are going to be raised and automatically added to our client success huddle. We had a quick huddle every single day. So within 24 hours, I knew that that client block was going to become unblocked and the onboarding would get back on track. And again, all of that is without any input from me. I said that there were two things got fired off of that initial onboarding form. So the first was the SOP and the workflow that ensured my team onboarded this client directly. The second was the information flow. So all of the information that was taken out of that client onboarding form got automatically populated into our master client dashboard. Master dashboard, that master client tracker was now automatically updated. I could see that the new client was in there. I could see all the relevant information for that client, their billing email and their address and the name of their dog, whatever was important information for me and my client success team to see, it was automatically added to the client tracker. As the client moved through the onboarding process and went from onboarding started to onboarding finalized to launch, the status within the client tracker would change so that at a glance, I could go into our master client tracker. I could see exactly how many clients were in the onboarding process and exactly where in the process they were. So the dashboard offered me real time visibility into that process. If I ever cared to jump in there and take a look between you and me, I never did. And I never had to because I trusted that the system was going to manage that entire process for me. And I added even one more step, which is that I would get automatically notified if a process was blocked or overdue. I would get notified via the meeting, my team telling me that there was some issue, and I would get notified when that client was successfully onboarded. I set the notifications in my project management system to notify me automatically and directly when these major milestones were on track or off track. What that meant is that I was now able to track our entire onboarding process. I could measure exactly how efficiently or inefficiently we were getting things done. I could see exactly which tasks were the ones that were consistently blocking us or holding us up. I could make ongoing and continuous improvements to that process so that every single time we onboarded a client, we got slightly better and slightly better and slightly better until the entire process was as fast and efficient and automated and streamlined as possible. So the process of the SOP warehouse pushing tasks into individual to-do lists that got escalated to meeting agendas when necessary, all of that backed by that information being tracked and kept up to date in master dashboards, aka the entire single source of truth system working in harmony, working together. Allowed me to take one of the most complicated processes, one of the most important moments in our client happiness journey, and put it on autopilot with a safety net in place so that I would personally get notified only if and when there was a problem. And I could see the analytics and have the visibility into that process to consistently make improvements to it all the time. Allowed us to take a process that our competitors were generally spending between seven to 10 days on. And our onboarding process got done every time within two to maximum three days. We moved faster as a team. We moved more efficiently as a team. We were spending our time doing the most important work, namely onboarding the client and getting them live to give them a wow experience. And we were spending none of our time trying to track down information, trying to figure out where in the process we were, trying to pick up dropped balls if and when they got dropped, trying to fight the fire when somebody forgot a task and now the client was pissed. None of that happened because the system ensured that the right work got done with or without me. Again, this is just one example of what a truly working single source of truth can do for you and can do for your team. I hope that this illustrates the power of this system. And I wanted to take a moment to talk you through an in-depth example like that, because the reality is that this project will take work. It takes work to build and maintain a single source of truth. It's going to take work for you to turn. this outline around to your team and for them to centralize it and populate it and pull all of that information in. It's going to take work for them to keep those master dashboards up to date. It's going to take work for them to change their habits and their behaviors so that they get used to using this system exactly this way. I'm not going to lie to you. It's hard. So it's important to remember why it's worth the hard. Why it makes not just our life, but our team's life way easier. Why it makes our business way faster, way more productive, way more profitable. And why with all of that saved time and energy, we can now devote all of that back to the highest value driving activities that are going to drive growth into our company. So yes, it is hard. And yes, it is also absolutely worth it. So with all that being said, let's now bring this all together. Let's click back to the worksheet and build the final outline of exactly what is going to go into your single source of truth. We really are at the end here. So let's bring all of this together and produce a final and tangible deliverable, which is your final outline. So we have now listed out across this worksheet, all the very many things, all the very many lists, the different SOPs, all of the stuff that we want our single source of truth to have. The final step is to now reorganize it all into a single comprehensive outline. So it's a three-step process here. Step one, decide on the folder structure that you want to organize everything. This is the macro folder structure. So I would advise having a folder for each department as well as each major product. So if you only have one product, maybe you don't need this. Maybe you just have a product folder and then that's everything regarding your product. But if you have a couple of different tiers of products and these products have different SOPs, different team members running them, then I would recommend taking that one parent product folder and actually just breaking it down into the relevant products that you and your business offer. So you can see my example here in step one. Again, we're not overcomplicating this. It's sales, it's marketing, it's product A, it's product B, right? Keep it very simple, but individualize this to you and your business. What is the macro structure that you want to organize your single source of truth under? Then step number two is we are going to go back to the very beginning of this worksheet. We're going to look at the brain dump of stuff that we put in every single page of this worksheet, and we are going to organize it into the macro folders, right? So where do we want our SOP warehouse? Not to give you the answer, but I'd recommend you put that under operations. Where do we want master dashboards? Those are probably going to be split up within each folder because different departments have different master dashboards that are relevant to them. What about individual to-do lists? Remember, this one you don't have to touch. Individual to-do lists are automatically generated by your single source of truth software, so you shouldn't have to touch that. Meeting agendas, again, do you want meeting agendas under operations or do you want them underneath each individual department and the meetings that that department has? No wrong answers here. I'm giving you my suggestion, but there are no wrong answers here. This is what is going to allow this outline to be as organized and functional for you. You get to decide. You get to customize this. And then lastly, project management. I would again advise that different projects belong to different departments or different products. So each major project management list is going to be separated out and organized accordingly. So take all of the brain dump, all of the different items, all of the different SOPs, everything that we've listed out and now categorize and organize into sub folders or sub lists underneath each of these departments. Gorgeous. So if you scroll down in your worksheet, I have actually given you an example of my personal single source of truth and how it is that we have organized each of these things for ourselves. And you can see that this outline that we're talking about right now is literally what is just going to appear along the left hand side of your click up when you go to build it out or whatever single source of truth software you use. So I've actually labeled where each of these core pillars exist within our system. The individual to-do list function, again, that is built in. That's the home function within ClickUp. For our meeting agendas, we decided to create meeting dashboards. And so each meeting has its own unique dashboard that we custom built out for that meeting. Our SOP warehouse is stored right here, SOP library. It's stored in our operations folder. And if you scroll down, you can see all the very many SOPs organized by core role, core department, core function. You'll see project management. So we had a project called DADA. Too long to get into here, but we had a project called Dada. And this is where we managed the Dada project. We had master dashboards. We had a master client tracker, a retainer client tracker. Those two things were different, right? So we had the master dashboards that were scattered all the way through all of these different folders. If I really expanded every single one of these folders, this example would go on for like four pages. So I tried to keep it short and sweet for you guys. But you'll see down here that we have key folders for each key department and product within our business. One thing that I really like is an executive folder, which you can see this little lock. That means it's private to me where I'm able to track executive level views and visibility across my business. So again, you get to design this now. This is the deliverable. What overarching folders do you want? What master dashboards and projects belong in each of those folders? Where do you want your SOPs stored and listed out? How do you want to structure your meeting agendas? You get to decide. And if you're feeling a little stuck right now, like, oh my God, John, I way too much. I don't know how I want to organize this. The great news is you can always change it later. This is just to give an outline so that you and your team have something to work off of. But any one of these lists can be reorganized into any one of these folders down the road. It's frankly not that irreversible. So my invite is just start. And once you have the outline and you start populating things in and filling things in, you'll figure out what works well for you and for your team. So now there is a step three to this process. And that is once you have this outline completed. Give it to your team and specifically give it to your operator. So if you have that operation specialist on your team, this is their project. It's going to probably take them like the next one to three months to populate all of the things in that you want. But give this to your operator. This is their skill set. This is their job. This is like giving a kid a sandbox to play in. Like they will be so excited that you want them to redesign and build out a company wide system like they can't wait. Right. So give them this project, set realistic timeline expectations with them around how long it's going to take. Again, I recommend two to three months before this is fully built and working within the business and let them work their magic. You have now done your part. You are clear on what this system needs to include, how you want it organized and what it should display. Now let your operator go to work. If you don't have an operator, then do me a kindness and go check out the other live masterclass that I did in SaaS Academy. It's called your A-Player Operator Magnet. And that goes through my entire hiring process for finding and hiring your operator. One of the biggest questions I always get is, well, what if I hire an ops manager? What are they going to be doing? This. They are going to be building out, designing, optimizing, and continuously updating and evolving your single source of truth as your company continues to grow and evolve. This is their baby. And if you recognize that your company is at the size that you really need a system like this, and you absolutely do not have the time to go in and build it out yourself, then that might be a good indicator that it is time for you to hire an ops manager. So again, go over, check the A player operator magnet. If you want my blow by blow on exactly who that person is, what they should be doing, how much to pay them, how to hire them, the works. It is all there for you. Okay, we are here now. Congratulations. And to be clear, the work is just beginning. Now we understand what this system is. It is time to build it within your company. It is time to use it across you and your team. And I promise you that if you commit to that process, because it's not going to be easy, it's going to take time. But if you commit to it, it will fundamentally transform the day-to-day of your business. It will not only radically improve the productivity of your team, it will not only massively speed up your team's execution and ability to get work done, it will not only ensure that you are able to scale at maximum profitability and keep your team as small and lean as possible at each stage of growth, but it will also vastly improve the day-to-day experience that you have of running your business. Because now all of your time and energy will be freed up from the dropped balls and the micro detail and being down stuck in the weeds of your business. And you can hand all of that off to the system itself and get back to doing the things you love the most, doing the things you are best at, and doing the things that drive real value to your company. I cannot wait to see your business transformed by this system. And I cannot wait to support you in the next steps of this journey. My name is Jonna Lee. A massive thank you for letting me guide you through this process. And I will see you very soon.",
+  "segments": [
+    {
+      "text": " I bet you thought we were done, right?",
+      "start": 10.2,
+      "end": 11.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Like five pillars in a single source of truth.",
+      "start": 12.4,
+      "end": 14.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " We've got five videos covering those pillars.",
+      "start": 15.2,
+      "end": 17.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " We're good, Jonna.",
+      "start": 17.2,
+      "end": 17.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I got it.",
+      "start": 17.9,
+      "end": 18.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I know we are so close, but there is one final topic to cover, which is bringing all five of these pillars in your single source of truth together.",
+      "start": 19.1,
+      "end": 30.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Because the real power of this system is not each individual pillar.",
+      "start": 31.2,
+      "end": 36.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It's how these pillars fit and automatically sync together to create one cohesive single source of truth that runs the day to day of your business.",
+      "start": 36.9,
+      "end": 49,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So I want to take some time here just to dive a little bit deeper into how all of these different pillars work and play together and give you a tactical example so that you can understand firsthand",
+      "start": 49.1,
+      "end": 61.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " how having this new system running within your business with all five pillars firing on all cylinders is going to be absolutely transformative.",
+      "start": 61.7,
+      "end": 71.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So if you will bear with me, we have one final topic to cover together.",
+      "start": 71.8,
+      "end": 76.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And then I am going to walk you through building out and finalizing the tangible deliverable of all of this information, which is going to be the finished outline of your single source of truth.",
+      "start": 76.6,
+      "end": 88.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So let's dive into it by starting with a tangible, a tactical example about how each of these core pillars in the single source of truth work together seamlessly in the background to create one",
+      "start": 88.6,
+      "end": 101.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " maximally efficient team for you and for your business.",
+      "start": 101.6,
+      "end": 105,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " The example that I want to use is client onboarding, because traditionally client onboarding is a mess in just about every business I've ever looked at or worked with.",
+      "start": 105.4,
+      "end": 114.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Why?",
+      "start": 115.1,
+      "end": 115.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Because it's so complicated.",
+      "start": 115.7,
+      "end": 117.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It requires so many different steps from so many different people that need to happen in really tight order back to back to back as quickly as possible.",
+      "start": 117.6,
+      "end": 125.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And any mistake pisses off your client and really incurs a very real risk that they might leave.",
+      "start": 125.7,
+      "end": 132.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Right.",
+      "start": 133,
+      "end": 133.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Like mistakes in client onboarding totally destroy client trust and client experience.",
+      "start": 133.2,
+      "end": 139.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And we know how much that costs us in the form of lower client lifetime value.",
+      "start": 139.3,
+      "end": 145.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So client onboarding is a great one because it's super hard to do well and it's super high stakes.",
+      "start": 145.6,
+      "end": 151.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So let's talk about how we could use our single source of truth once it's all built out to make client onboarding not just fast, not just frictionless, but actually fully automated.",
+      "start": 152.3,
+      "end": 165.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I mentioned that when I ran a digital marketing agency, we were onboarding two to four clients a day, and that entire process happened on autopilot, meaning I did not look at it once.",
+      "start": 165.7,
+      "end": 177.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I trusted the system to run this incredibly complicated multi-step process without me.",
+      "start": 177.7,
+      "end": 183.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " What did that look like?",
+      "start": 183.9,
+      "end": 184.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It looked something like this.",
+      "start": 185.2,
+      "end": 186.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So we had a new client.",
+      "start": 186.9,
+      "end": 188.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Our closer hopped on a call with them and closed them.",
+      "start": 188.5,
+      "end": 190.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Fantastic.",
+      "start": 190.4,
+      "end": 191.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " As soon as that client hopped off the call, the very next step would be for my closer to fill out what we called a client onboarding form.",
+      "start": 191.5,
+      "end": 199.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " You've got one form with all of the critical information about that client and everything that the back end team needs in order to be able to fulfill on that client service successfully.",
+      "start": 200.4,
+      "end": 211.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So beautiful.",
+      "start": 211.7,
+      "end": 212.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " The closer fills out a client onboarding form.",
+      "start": 212.5,
+      "end": 214.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " This had the added benefit of making sure that my back end team was never bothering my sales team because the sales team was handing off all of the critical information automatically to the back end team.",
+      "start": 214.9,
+      "end": 227,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And they never had to go back to sales and bother them in the middle of their important day taking calls to ask, where are we at with this client?",
+      "start": 227.2,
+      "end": 234.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Or what did that client agree to?",
+      "start": 234.4,
+      "end": 235.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Or what's their payment plan?",
+      "start": 235.5,
+      "end": 236.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " All of that was added into the form.",
+      "start": 236.9,
+      "end": 238.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " OK, beautiful.",
+      "start": 239,
+      "end": 239.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So the form is what kicked off the entire onboarding automation.",
+      "start": 239.9,
+      "end": 244.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " From the form, two things happened.",
+      "start": 244.7,
+      "end": 246.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Number one, the onboarding SOP was duplicated and assigned.",
+      "start": 246.8,
+      "end": 251,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " When we were small, this was literally just a VA.",
+      "start": 251.3,
+      "end": 254,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Every time a new client onboarding form came in and we got the notification in Slack, they would go into our onboarding SOP inside of our SOP warehouse.",
+      "start": 254.4,
+      "end": 262.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " They would duplicate that checklist SOP template.",
+      "start": 263.1,
+      "end": 267,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " They would assign the relevant account manager, the relevant media buyer, the entire fulfillment team to that client that needed to be present for that onboarding process.",
+      "start": 267.4,
+      "end": 275.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " They would assign out every single task.",
+      "start": 275.6,
+      "end": 277.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " They would set a due date for every single task, right?",
+      "start": 277.4,
+      "end": 280.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So whether this happens manually or if you want to make it fancy, you can do this automatically.",
+      "start": 280.5,
+      "end": 284.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " The onboarding SOP got duplicated and assigned out.",
+      "start": 284.8,
+      "end": 287.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Beautiful.",
+      "start": 287.9,
+      "end": 288.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " What happened then?",
+      "start": 288.2,
+      "end": 288.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " All of those tasks got pushed to people's individual to-do lists.",
+      "start": 289.3,
+      "end": 293.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So again, I haven't seen a thing.",
+      "start": 293.8,
+      "end": 295.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I see a notification coming into Slack with a little hooray sign that we just got in.",
+      "start": 295.8,
+      "end": 300,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " new client.",
+      "start": 300,
+      "end": 300.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And what I know is that automatically my entire team has been notified.",
+      "start": 300.8,
+      "end": 304.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " They all know exactly what tasks they now need to get done by what date.",
+      "start": 304.8,
+      "end": 308.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And all of those tasks are sitting in their individual to-do lists, just waiting to get done on the appropriate deadline.",
+      "start": 308.7,
+      "end": 314.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Gorgeous.",
+      "start": 315.3,
+      "end": 315.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So I can now trust that my client is going to get onboarded seamlessly.",
+      "start": 316,
+      "end": 321,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I also know that if any individual member of my team gets stuck or blocked or the client onboarding gets off track and slowed down, then those issues are going to be raised and automatically added to our client success huddle.",
+      "start": 321.9,
+      "end": 336.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " We had a quick huddle every single day.",
+      "start": 336.6,
+      "end": 338.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So within 24 hours, I knew that that client block was going to become unblocked and the onboarding would get back on track.",
+      "start": 338.7,
+      "end": 345.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And again, all of that is without any input from me.",
+      "start": 345.3,
+      "end": 349,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I said that there were two things got fired off of that initial onboarding form.",
+      "start": 349.1,
+      "end": 353.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So the first was the SOP and the workflow that ensured my team onboarded this client directly.",
+      "start": 353.1,
+      "end": 358.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " The second was the information flow.",
+      "start": 358.6,
+      "end": 361.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So all of the information that was taken out of that client onboarding form got automatically populated into our master client dashboard.",
+      "start": 361.4,
+      "end": 370.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Master dashboard, that master client tracker was now automatically updated.",
+      "start": 370.4,
+      "end": 374.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I could see that the new client was in there.",
+      "start": 374.9,
+      "end": 376.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I could see all the relevant information for that client, their billing email and their address and the name of their dog, whatever was important information for me and my client success team to see, it was automatically added to the client tracker.",
+      "start": 376.8,
+      "end": 389.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " As the client moved through the onboarding process and went from onboarding started to onboarding finalized to launch, the status within the client tracker would change so that at a glance, I could go into our master client tracker.",
+      "start": 389.9,
+      "end": 403.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I could see exactly how many clients were in the onboarding process and exactly where in the process they were.",
+      "start": 403.6,
+      "end": 409.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So the dashboard offered me real time visibility into that process.",
+      "start": 410,
+      "end": 414.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " If I ever cared to jump in there and take a look between you and me, I never did.",
+      "start": 414.3,
+      "end": 418.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And I never had to because I trusted that the system was going to manage that entire process for me.",
+      "start": 418.9,
+      "end": 424.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And I added even one more step, which is that I would get automatically notified if a process was blocked or overdue.",
+      "start": 424.6,
+      "end": 431.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I would get notified via the meeting, my team telling me that there was some issue, and I would get notified when that client was successfully onboarded.",
+      "start": 431.6,
+      "end": 439.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I set the notifications in my project management system to notify me automatically and directly when these major milestones were on track or off track.",
+      "start": 439.2,
+      "end": 447.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " What that meant is that I was now able to track our entire onboarding process.",
+      "start": 447.7,
+      "end": 452.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I could measure exactly how efficiently or inefficiently we were getting things done.",
+      "start": 452.6,
+      "end": 457.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I could see exactly which tasks were the ones that were consistently blocking us or holding us up.",
+      "start": 458,
+      "end": 464.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I could make ongoing and continuous improvements to that process so that every single time we onboarded a client, we got slightly better and slightly better and slightly better until the entire process was as fast and efficient and automated and streamlined as",
+      "start": 464.8,
+      "end": 479.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " possible.",
+      "start": 479.8,
+      "end": 480.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So the process of the SOP warehouse pushing tasks into individual to-do lists that got escalated to meeting agendas when necessary, all of that backed by that information being tracked and kept up to date in master dashboards,",
+      "start": 480.5,
+      "end": 494.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " aka the entire single source of truth system working in harmony, working together.",
+      "start": 495.3,
+      "end": 501.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Allowed me to take one of the most complicated processes, one of the most important moments in our client happiness journey, and put it on autopilot with a safety net in place so that I would personally get notified",
+      "start": 502.5,
+      "end": 516.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " only if and when there was a problem.",
+      "start": 516.6,
+      "end": 519.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And I could see the analytics and have the visibility into that process to consistently make improvements to it all the time.",
+      "start": 519.5,
+      "end": 527.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Allowed us to take a process that our competitors were generally spending between seven to 10 days on.",
+      "start": 528.1,
+      "end": 533.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And our onboarding process got done every time within two to maximum three days.",
+      "start": 533.8,
+      "end": 539.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " We moved faster as a team.",
+      "start": 539.8,
+      "end": 541.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " We moved more efficiently as a team.",
+      "start": 541.8,
+      "end": 544.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " We were spending our time doing the most important work, namely onboarding the client and getting them live to give them a wow experience.",
+      "start": 544.2,
+      "end": 551.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And we were spending none of our time trying to track down information, trying to figure out where in the process we were, trying to pick up dropped balls if and when they got dropped, trying to fight the fire when somebody forgot a task and now the client was pissed.",
+      "start": 551.7,
+      "end": 564.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " None of that happened because the system ensured that the right work got done with or without me.",
+      "start": 565.1,
+      "end": 572.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Again, this is just one example of what a truly working single source of truth can do for you and can do for your team.",
+      "start": 573.1,
+      "end": 580,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I hope that this illustrates the power of this system.",
+      "start": 580.2,
+      "end": 583.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And I wanted to take a moment to talk you through an in-depth example like that, because the reality is that this project will take work.",
+      "start": 583.6,
+      "end": 592.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It takes work to build and maintain a single source of truth.",
+      "start": 593.4,
+      "end": 598.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It's going to take work for you to turn.",
+      "start": 598.2,
+      "end": 600,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " this outline around to your team and for them to centralize it and populate it and pull all of that information in.",
+      "start": 600.1,
+      "end": 606.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It's going to take work for them to keep those master dashboards up to date.",
+      "start": 606.5,
+      "end": 610.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It's going to take work for them to change their habits and their behaviors so that they get used to using this system exactly this way.",
+      "start": 610.5,
+      "end": 618.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I'm not going to lie to you.",
+      "start": 618.6,
+      "end": 619.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It's hard.",
+      "start": 620,
+      "end": 620.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So it's important to remember why it's worth the hard.",
+      "start": 621,
+      "end": 626,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Why it makes not just our life, but our team's life way easier.",
+      "start": 626.7,
+      "end": 630.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Why it makes our business way faster, way more productive, way more profitable.",
+      "start": 631.3,
+      "end": 636.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And why with all of that saved time and energy, we can now devote all of that back to the highest value driving activities that are going to drive growth into our company.",
+      "start": 637,
+      "end": 649.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So yes, it is hard.",
+      "start": 650,
+      "end": 651.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And yes, it is also absolutely worth it.",
+      "start": 651.8,
+      "end": 655.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So with all that being said, let's now bring this all together.",
+      "start": 656.4,
+      "end": 660.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Let's click back to the worksheet and build the final outline of exactly what is going to go into your single source of truth.",
+      "start": 660.2,
+      "end": 667.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " We really are at the end here.",
+      "start": 668.3,
+      "end": 670,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So let's bring all of this together and produce a final and tangible deliverable, which is your final outline.",
+      "start": 670.1,
+      "end": 677,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So we have now listed out across this worksheet, all the very many things, all the very many lists, the different SOPs, all of the stuff that we want our single source of truth to have.",
+      "start": 677.4,
+      "end": 688.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " The final step is to now reorganize it all into a single comprehensive outline.",
+      "start": 688.8,
+      "end": 693.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So it's a three-step process here.",
+      "start": 694,
+      "end": 695.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Step one, decide on the folder structure that you want to organize everything.",
+      "start": 695.8,
+      "end": 700.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " This is the macro folder structure.",
+      "start": 700.7,
+      "end": 703,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So I would advise having a folder for each department as well as each major product.",
+      "start": 703.1,
+      "end": 708.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So if you only have one product, maybe you don't need this.",
+      "start": 709.2,
+      "end": 712.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Maybe you just have a product folder and then that's everything regarding your product.",
+      "start": 712.2,
+      "end": 715.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " But if you have a couple of different tiers of products and these products have different SOPs, different team members running them, then I would recommend",
+      "start": 715.4,
+      "end": 723.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " taking that one parent product folder and actually just breaking it down into the relevant products that you and your business offer.",
+      "start": 724.1,
+      "end": 730.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So you can see my example here in step one.",
+      "start": 730.9,
+      "end": 733.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Again, we're not overcomplicating this.",
+      "start": 733.6,
+      "end": 735.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It's sales, it's marketing, it's product A, it's product B, right?",
+      "start": 735.1,
+      "end": 737.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Keep it very simple, but individualize this to you and your business.",
+      "start": 737.9,
+      "end": 742.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " What is the macro structure that you want to organize your single source of truth under?",
+      "start": 742.1,
+      "end": 746.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Then step number two is we are going to go back to the very beginning of this worksheet.",
+      "start": 747.5,
+      "end": 752.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " We're going to look at the brain dump of stuff that we put in every single page of this worksheet, and we are going to organize it into the macro folders, right?",
+      "start": 752.6,
+      "end": 763.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So where do we want our SOP warehouse?",
+      "start": 763.5,
+      "end": 765.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Not to give you the answer, but I'd recommend you put that under operations.",
+      "start": 766,
+      "end": 769,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Where do we want master dashboards?",
+      "start": 769.3,
+      "end": 771,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Those are probably going to be split up within each folder because different departments have different master dashboards that are relevant to them.",
+      "start": 771.1,
+      "end": 778.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " What about individual to-do lists?",
+      "start": 778.8,
+      "end": 780.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Remember, this one you don't have to touch.",
+      "start": 780.4,
+      "end": 782.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Individual to-do lists are automatically generated by your single source of truth software, so you shouldn't have to touch that.",
+      "start": 782.7,
+      "end": 788.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Meeting agendas, again, do you want meeting agendas under operations or do you want them underneath each individual department and the meetings that that department has?",
+      "start": 789.3,
+      "end": 796.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " No wrong answers here.",
+      "start": 797.4,
+      "end": 798.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I'm giving you my suggestion, but there are no wrong answers here.",
+      "start": 798.8,
+      "end": 802.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " This is what is going to allow this outline to be as organized and functional for you.",
+      "start": 802.7,
+      "end": 807.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " You get to decide.",
+      "start": 807.9,
+      "end": 808.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " You get to customize this.",
+      "start": 809,
+      "end": 810.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And then lastly, project management.",
+      "start": 810.8,
+      "end": 812.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I would again advise that different projects belong to different departments or different products.",
+      "start": 812.4,
+      "end": 817.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So each major project management list is going to be separated out and organized accordingly.",
+      "start": 817.3,
+      "end": 823.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So take all of the brain dump, all of the different items, all of the different SOPs, everything that we've listed out and now categorize and organize into sub folders or sub lists underneath each of these departments.",
+      "start": 823.9,
+      "end": 837.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Gorgeous.",
+      "start": 837.6,
+      "end": 838.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So if you scroll down in your worksheet, I have actually given you an example of my personal single source of truth and how it is that we have organized each of these things for ourselves.",
+      "start": 838.8,
+      "end": 849.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And you can see that this outline that we're talking about right now is literally what is just going to appear along the left hand side of your click up when you go to build it out or whatever single source of truth software you use.",
+      "start": 850.5,
+      "end": 862.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So I've actually labeled where each of these core pillars exist within our system.",
+      "start": 863.2,
+      "end": 867.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " The individual to-do list function, again, that is built in.",
+      "start": 868.1,
+      "end": 871.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " That's the home function within ClickUp.",
+      "start": 871.2,
+      "end": 873.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " For our meeting agendas, we decided to create meeting dashboards.",
+      "start": 873.7,
+      "end": 877,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And so each meeting has its own unique dashboard that we custom built out for that meeting.",
+      "start": 877.2,
+      "end": 882.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Our SOP warehouse is stored right here, SOP library.",
+      "start": 882.9,
+      "end": 886,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It's stored in our operations folder.",
+      "start": 886.3,
+      "end": 888,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And if you scroll down, you can see all the very many SOPs organized by core role, core department, core function.",
+      "start": 888.2,
+      "end": 895.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " You'll see project management.",
+      "start": 896.3,
+      "end": 897.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So we had a project called DADA.",
+      "start": 897.6,
+      "end": 899.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Too long to get into here, but we had a project called Dada.",
+      "start": 900,
+      "end": 902.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And this is where we managed the Dada project.",
+      "start": 902.8,
+      "end": 905.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " We had master dashboards.",
+      "start": 905.7,
+      "end": 907,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " We had a master client tracker, a retainer client tracker.",
+      "start": 907,
+      "end": 909.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Those two things were different, right?",
+      "start": 909.4,
+      "end": 910.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So we had the master dashboards that were scattered all the way through all of these different folders.",
+      "start": 911,
+      "end": 916.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " If I really expanded every single one of these folders, this example would go on for like four pages.",
+      "start": 916.6,
+      "end": 921.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So I tried to keep it short and sweet for you guys.",
+      "start": 921.8,
+      "end": 924,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " But you'll see down here that we have key folders for each key department and product within our business.",
+      "start": 924.3,
+      "end": 931,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " One thing that I really like is an executive folder, which you can see this little lock.",
+      "start": 931.5,
+      "end": 935.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " That means it's private to me where I'm able to track executive level views and visibility across my business.",
+      "start": 935.5,
+      "end": 941.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So again, you get to design this now.",
+      "start": 941.3,
+      "end": 944,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " This is the deliverable.",
+      "start": 944,
+      "end": 945.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " What overarching folders do you want?",
+      "start": 945.6,
+      "end": 948.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " What master dashboards and projects belong in each of those folders?",
+      "start": 948.4,
+      "end": 952.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Where do you want your SOPs stored and listed out?",
+      "start": 952.3,
+      "end": 955.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " How do you want to structure your meeting agendas?",
+      "start": 955.7,
+      "end": 957.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " You get to decide.",
+      "start": 958.1,
+      "end": 959.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And if you're feeling a little stuck right now, like, oh my God, John, I way too much.",
+      "start": 959.5,
+      "end": 962.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I don't know how I want to organize this.",
+      "start": 962.6,
+      "end": 964.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " The great news is you can always change it later.",
+      "start": 964.6,
+      "end": 968.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " This is just to give an outline so that you and your team have something to work off of.",
+      "start": 968.6,
+      "end": 973.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " But any one of these lists can be reorganized into any one of these folders down the road.",
+      "start": 974.1,
+      "end": 979.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It's frankly not that irreversible.",
+      "start": 979.2,
+      "end": 981.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So my invite is just start.",
+      "start": 981.7,
+      "end": 984.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And once you have the outline and you start populating things in and filling things in, you'll figure out what works well for you and for your team.",
+      "start": 984.6,
+      "end": 992.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So now there is a step three to this process.",
+      "start": 993.2,
+      "end": 995.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And that is once you have this outline completed.",
+      "start": 996.1,
+      "end": 998.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Give it to your team and specifically give it to your operator.",
+      "start": 999.4,
+      "end": 1004.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So if you have that operation specialist on your team, this is their project.",
+      "start": 1005,
+      "end": 1011.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It's going to probably take them like the next one to three months to populate all of the things in that you want.",
+      "start": 1011.9,
+      "end": 1017.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " But give this to your operator.",
+      "start": 1018.1,
+      "end": 1019.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " This is their skill set.",
+      "start": 1019.9,
+      "end": 1021.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " This is their job.",
+      "start": 1021.8,
+      "end": 1023.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " This is like giving a kid a sandbox to play in.",
+      "start": 1023.2,
+      "end": 1026.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Like they will be so excited that you want them to redesign and build out a company wide system like they can't wait.",
+      "start": 1026.3,
+      "end": 1032.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Right.",
+      "start": 1032.9,
+      "end": 1033.1,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So give them this project, set realistic timeline expectations with them around how long it's going to take.",
+      "start": 1033.3,
+      "end": 1038.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Again, I recommend two to three months before this is fully built and working within the business and let them work their magic.",
+      "start": 1038.9,
+      "end": 1047.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " You have now done your part.",
+      "start": 1047.5,
+      "end": 1048.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " You are clear on what this system needs to include, how you want it organized and what it should display.",
+      "start": 1048.9,
+      "end": 1055.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Now let your operator go to work.",
+      "start": 1055.7,
+      "end": 1058.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " If you don't have an operator, then do me a kindness and go check out the other live masterclass that I did in SaaS Academy.",
+      "start": 1059.1,
+      "end": 1066,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It's called your A-Player Operator Magnet.",
+      "start": 1066.2,
+      "end": 1069,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And that goes through my entire hiring process for finding and hiring your operator.",
+      "start": 1069.2,
+      "end": 1074,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " One of the biggest questions I always get is, well, what if I hire an ops manager?",
+      "start": 1074.3,
+      "end": 1077.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " What are they going to be doing?",
+      "start": 1078,
+      "end": 1079,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " This.",
+      "start": 1080.2,
+      "end": 1080.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " They are going to be building out, designing, optimizing, and continuously updating and evolving your single source of truth as your company continues to grow and evolve.",
+      "start": 1081.1,
+      "end": 1092.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " This is their baby.",
+      "start": 1092.3,
+      "end": 1094.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And if you recognize that your company is at the size that you really need a system like this, and you absolutely do not have the time to go in and build it out yourself, then that might be a good indicator that it is time for you to hire an ops manager.",
+      "start": 1094.6,
+      "end": 1108.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " So again, go over, check the A player operator magnet.",
+      "start": 1108.8,
+      "end": 1111.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " If you want my blow by blow on exactly who that person is, what they should be doing, how much to pay them, how to hire them, the works.",
+      "start": 1111.7,
+      "end": 1117.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It is all there for you.",
+      "start": 1117.9,
+      "end": 1119.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Okay, we are here now.",
+      "start": 1120.4,
+      "end": 1123,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Congratulations.",
+      "start": 1123.2,
+      "end": 1124.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And to be clear, the work is just beginning.",
+      "start": 1124.8,
+      "end": 1127.7,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Now we understand what this system is.",
+      "start": 1128.2,
+      "end": 1130,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It is time to build it within your company.",
+      "start": 1130.2,
+      "end": 1132.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It is time to use it across you and your team.",
+      "start": 1132.8,
+      "end": 1136,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And I promise you that if you commit to that process, because it's not going to be easy, it's going to take time.",
+      "start": 1136.4,
+      "end": 1142.3,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " But if you commit to it, it will fundamentally transform the day-to-day of your business.",
+      "start": 1142.6,
+      "end": 1149.9,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " It will not only radically improve the productivity of your team, it will not only",
+      "start": 1150.2,
+      "end": 1156,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " massively speed up your team's execution and ability to get work done, it will not only ensure that you are able to scale at maximum profitability",
+      "start": 1156.3,
+      "end": 1167.2,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " and keep your team as small and lean as possible at each stage of growth, but it will also vastly improve the day-to-day experience that you have of running your business.",
+      "start": 1167.6,
+      "end": 1179,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " Because now all of your time and energy will be freed up from the dropped balls and the micro detail and being down stuck in the weeds of your business.",
+      "start": 1179.4,
+      "end": 1187.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And you can hand all of that off to the system itself and get back to doing the things you love the most, doing the things you are best at, and doing the things that drive real",
+      "start": 1188.3,
+      "end": 1199.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " value to your company.",
+      "start": 1200.1,
+      "end": 1202.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " I cannot wait to see your business transformed by this system.",
+      "start": 1202.7,
+      "end": 1208.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And I cannot wait to support you in the next steps of this journey.",
+      "start": 1208.6,
+      "end": 1213.8,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " My name is Jonna Lee.",
+      "start": 1214.3,
+      "end": 1215.6,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " A massive thank you for letting me guide you through this process.",
+      "start": 1215.9,
+      "end": 1219.4,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    },
+    {
+      "text": " And I will see you very soon.",
+      "start": 1219.7,
+      "end": 1221.5,
+      "type": "transcription_segment",
+      "speaker_id": "speaker_1"
+    }
+  ],
+  "usage": {
+    "promptTokens": 25,
+    "completionTokens": 6300,
+    "totalTokens": 6325,
+    "promptAudioSeconds": 1225,
+    "additionalProperties": {
+      "request_count": 5,
+      "num_cached_tokens": 0
+    }
+  },
+  "language": null,
+  "additionalProperties": {
+    "type": "transcription.done"
+  }
+}
