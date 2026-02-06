@@ -4,15 +4,17 @@ defmodule BoldTranscriptsEx.MixProject do
   def project do
     [
       app: :bold_transcripts_ex,
-      version: "0.7.0",
+      version: "0.8.0",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       description: description(),
       package: package(),
+      source_url: "https://github.com/boldvideo/transcripts_ex",
+      homepage_url: "https://bold.video",
       docs: [
         main: "readme",
-        extras: ["README.md"]
+        extras: ["README.md", "CHANGELOG.md"]
       ]
     ]
   end
@@ -34,14 +36,15 @@ defmodule BoldTranscriptsEx.MixProject do
 
   defp description do
     """
-    A library for converting transcripts from various providers (AssemblyAI, Deepgram)
-    to Bold's unified transcript format.
+    A library for converting transcripts from various providers
+    (AssemblyAI, Deepgram, Speechmatics, Mistral) to Bold's unified transcript format.
     """
   end
 
   defp package do
     [
       licenses: ["MIT"],
+      files: ~w(lib mix.exs README.md CHANGELOG.md LICENSE llms.txt .formatter.exs),
       links: %{
         "GitHub" => "https://github.com/boldvideo/transcripts_ex",
         "Bold Video" => "https://bold.video"

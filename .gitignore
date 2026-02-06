@@ -26,4 +26,6 @@ bold_transcripts_ex-*.tar
 /tmp/
 
 /data/
+/docs/
+/thoughts/
 .DS_Store
